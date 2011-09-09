@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA481419D9DD00064AA9 /* UIKit.framework */; };
+		C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4A1419D9DD00064AA9 /* Foundation.framework */; };
+		C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */; };
+		C937DA531419D9DD00064AA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C937DA511419D9DD00064AA9 /* InfoPlist.strings */; };
+		C937DA551419D9DD00064AA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C937DA541419D9DD00064AA9 /* main.m */; };
+		C937DA591419D9DD00064AA9 /* RMITAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C937DA581419D9DD00064AA9 /* RMITAppDelegate.m */; };
+		C937DA5C1419D9DD00064AA9 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C937DA5A1419D9DD00064AA9 /* MainWindow.xib */; };
+		C937DA5F1419D9DD00064AA9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C937DA5E1419D9DD00064AA9 /* RootViewController.m */; };
+		C937DA621419D9DD00064AA9 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C937DA601419D9DD00064AA9 /* RootViewController.xib */; };
+		C937DA6A1419D9DD00064AA9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA691419D9DD00064AA9 /* SenTestingKit.framework */; };
+		C937DA6B1419D9DD00064AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA481419D9DD00064AA9 /* UIKit.framework */; };
+		C937DA6C1419D9DD00064AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4A1419D9DD00064AA9 /* Foundation.framework */; };
+		C937DA6D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */; };
+		C937DA751419D9DD00064AA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C937DA731419D9DD00064AA9 /* InfoPlist.strings */; };
+		C937DA771419D9DD00064AA9 /* RMITTests.h in Resources */ = {isa = PBXBuildFile; fileRef = C937DA761419D9DD00064AA9 /* RMITTests.h */; };
+		C937DA791419D9DD00064AA9 /* RMITTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C937DA781419D9DD00064AA9 /* RMITTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C937DA6E1419D9DD00064AA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C937DA3B1419D9DD00064AA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C937DA431419D9DD00064AA9;
+			remoteInfo = RMIT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C937DA441419D9DD00064AA9 /* RMIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C937DA481419D9DD00064AA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C937DA4A1419D9DD00064AA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C937DA501419D9DD00064AA9 /* RMIT-Info.plist */ = {isa = PBXFileReference; path = "RMIT-Info.plist"; sourceTree = "<group>"; };
+		C937DA521419D9DD00064AA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C937DA541419D9DD00064AA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C937DA561419D9DD00064AA9 /* RMIT-Prefix.pch */ = {isa = PBXFileReference; path = "RMIT-Prefix.pch"; sourceTree = "<group>"; };
+		C937DA571419D9DD00064AA9 /* RMITAppDelegate.h */ = {isa = PBXFileReference; path = RMITAppDelegate.h; sourceTree = "<group>"; };
+		C937DA581419D9DD00064AA9 /* RMITAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMITAppDelegate.m; sourceTree = "<group>"; };
+		C937DA5B1419D9DD00064AA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		C937DA5D1419D9DD00064AA9 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		C937DA5E1419D9DD00064AA9 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C937DA611419D9DD00064AA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		C937DA681419D9DD00064AA9 /* RMITTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMITTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C937DA691419D9DD00064AA9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C937DA721419D9DD00064AA9 /* RMITTests-Info.plist */ = {isa = PBXFileReference; path = "RMITTests-Info.plist"; sourceTree = "<group>"; };
+		C937DA741419D9DD00064AA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C937DA761419D9DD00064AA9 /* RMITTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMITTests.h; sourceTree = "<group>"; };
+		C937DA781419D9DD00064AA9 /* RMITTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMITTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C937DA411419D9DD00064AA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */,
+				C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
+				C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C937DA641419D9DD00064AA9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C937DA6A1419D9DD00064AA9 /* SenTestingKit.framework in Frameworks */,
+				C937DA6B1419D9DD00064AA9 /* UIKit.framework in Frameworks */,
+				C937DA6C1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
+				C937DA6D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C937DA391419D9DD00064AA9 = {
+			isa = PBXGroup;
+			children = (
+				C937DA4E1419D9DD00064AA9 /* RMIT */,
+				C937DA701419D9DD00064AA9 /* RMITTests */,
+				C937DA471419D9DD00064AA9 /* Frameworks */,
+				C937DA451419D9DD00064AA9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C937DA451419D9DD00064AA9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C937DA441419D9DD00064AA9 /* RMIT.app */,
+				C937DA681419D9DD00064AA9 /* RMITTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C937DA471419D9DD00064AA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C937DA481419D9DD00064AA9 /* UIKit.framework */,
+				C937DA4A1419D9DD00064AA9 /* Foundation.framework */,
+				C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */,
+				C937DA691419D9DD00064AA9 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C937DA4E1419D9DD00064AA9 /* RMIT */ = {
+			isa = PBXGroup;
+			children = (
+				C937DA571419D9DD00064AA9 /* RMITAppDelegate.h */,
+				C937DA581419D9DD00064AA9 /* RMITAppDelegate.m */,
+				C937DA5A1419D9DD00064AA9 /* MainWindow.xib */,
+				C937DA5D1419D9DD00064AA9 /* RootViewController.h */,
+				C937DA5E1419D9DD00064AA9 /* RootViewController.m */,
+				C937DA601419D9DD00064AA9 /* RootViewController.xib */,
+				C937DA4F1419D9DD00064AA9 /* Supporting Files */,
+			);
+			path = RMIT;
+			sourceTree = "<group>";
+		};
+		C937DA4F1419D9DD00064AA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C937DA501419D9DD00064AA9 /* RMIT-Info.plist */,
+				C937DA511419D9DD00064AA9 /* InfoPlist.strings */,
+				C937DA541419D9DD00064AA9 /* main.m */,
+				C937DA561419D9DD00064AA9 /* RMIT-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C937DA701419D9DD00064AA9 /* RMITTests */ = {
+			isa = PBXGroup;
+			children = (
+				C937DA761419D9DD00064AA9 /* RMITTests.h */,
+				C937DA781419D9DD00064AA9 /* RMITTests.m */,
+				C937DA711419D9DD00064AA9 /* Supporting Files */,
+			);
+			path = RMITTests;
+			sourceTree = "<group>";
+		};
+		C937DA711419D9DD00064AA9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C937DA721419D9DD00064AA9 /* RMITTests-Info.plist */,
+				C937DA731419D9DD00064AA9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C937DA431419D9DD00064AA9 /* RMIT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C937DA7C1419D9DD00064AA9 /* Build configuration list for PBXNativeTarget "RMIT" */;
+			buildPhases = (
+				C937DA401419D9DD00064AA9 /* Sources */,
+				C937DA411419D9DD00064AA9 /* Frameworks */,
+				C937DA421419D9DD00064AA9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RMIT;
+			productName = RMIT;
+			productReference = C937DA441419D9DD00064AA9 /* RMIT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C937DA671419D9DD00064AA9 /* RMITTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C937DA7F1419D9DD00064AA9 /* Build configuration list for PBXNativeTarget "RMITTests" */;
+			buildPhases = (
+				C937DA631419D9DD00064AA9 /* Sources */,
+				C937DA641419D9DD00064AA9 /* Frameworks */,
+				C937DA651419D9DD00064AA9 /* Resources */,
+				C937DA661419D9DD00064AA9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C937DA6F1419D9DD00064AA9 /* PBXTargetDependency */,
+			);
+			name = RMITTests;
+			productName = RMITTests;
+			productReference = C937DA681419D9DD00064AA9 /* RMITTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C937DA3B1419D9DD00064AA9 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C937DA3E1419D9DD00064AA9 /* Build configuration list for PBXProject "RMIT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C937DA391419D9DD00064AA9;
+			productRefGroup = C937DA451419D9DD00064AA9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C937DA431419D9DD00064AA9 /* RMIT */,
+				C937DA671419D9DD00064AA9 /* RMITTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C937DA421419D9DD00064AA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C937DA531419D9DD00064AA9 /* InfoPlist.strings in Resources */,
+				C937DA5C1419D9DD00064AA9 /* MainWindow.xib in Resources */,
+				C937DA621419D9DD00064AA9 /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C937DA651419D9DD00064AA9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C937DA751419D9DD00064AA9 /* InfoPlist.strings in Resources */,
+				C937DA771419D9DD00064AA9 /* RMITTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C937DA661419D9DD00064AA9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C937DA401419D9DD00064AA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C937DA551419D9DD00064AA9 /* main.m in Sources */,
+				C937DA591419D9DD00064AA9 /* RMITAppDelegate.m in Sources */,
+				C937DA5F1419D9DD00064AA9 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C937DA631419D9DD00064AA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C937DA791419D9DD00064AA9 /* RMITTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C937DA6F1419D9DD00064AA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C937DA431419D9DD00064AA9 /* RMIT */;
+			targetProxy = C937DA6E1419D9DD00064AA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C937DA511419D9DD00064AA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C937DA521419D9DD00064AA9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C937DA5A1419D9DD00064AA9 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C937DA5B1419D9DD00064AA9 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		C937DA601419D9DD00064AA9 /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C937DA611419D9DD00064AA9 /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+		C937DA731419D9DD00064AA9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C937DA741419D9DD00064AA9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C937DA7A1419D9DD00064AA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C937DA7B1419D9DD00064AA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C937DA7D1419D9DD00064AA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
+				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C937DA7E1419D9DD00064AA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
+				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C937DA801419D9DD00064AA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMIT.app/RMIT";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
+				INFOPLIST_FILE = "RMITTests/RMITTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C937DA811419D9DD00064AA9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMIT.app/RMIT";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
+				INFOPLIST_FILE = "RMITTests/RMITTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C937DA3E1419D9DD00064AA9 /* Build configuration list for PBXProject "RMIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C937DA7A1419D9DD00064AA9 /* Debug */,
+				C937DA7B1419D9DD00064AA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C937DA7C1419D9DD00064AA9 /* Build configuration list for PBXNativeTarget "RMIT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C937DA7D1419D9DD00064AA9 /* Debug */,
+				C937DA7E1419D9DD00064AA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C937DA7F1419D9DD00064AA9 /* Build configuration list for PBXNativeTarget "RMITTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C937DA801419D9DD00064AA9 /* Debug */,
+				C937DA811419D9DD00064AA9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C937DA3B1419D9DD00064AA9 /* Project object */;
+}
