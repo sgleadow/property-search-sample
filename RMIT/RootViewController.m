@@ -17,41 +17,51 @@
 - (void)awakeFromNib
 {
     self.properties = [NSArray arrayWithObjects:
-                       [Property propertyWithAddess:@"1 Collins St"
+                       
+                       [Property propertyWithAddess:@"Government House Dr"
                                              suburb:@"Melbourne"
-                                           postcode:@"3000"],
+                                           postcode:@"3004"
+                                              photo:@"photo9"],
                        
-                       [Property propertyWithAddess:@"20 Flinders St"
-                                             suburb:@"Melbourne"
-                                           postcode:@"3000"],
+                       [Property propertyWithAddess:@"60-74 Buckingham Drive"
+                                             suburb:@"Heidelberg"
+                                           postcode:@"3084"
+                                              photo:@"photo1"],
                        
-                       [Property propertyWithAddess:@"220 Glenferrie Rd"
-                                             suburb:@"Hawthorn"
-                                           postcode:@"3122"],
+                       [Property propertyWithAddess:@"cnr Williams Road & Lechlade Ave"
+                                             suburb:@"South Yarra"
+                                           postcode:@"3141" 
+                                              photo:@"photo2"],
                        
-                       [Property propertyWithAddess:@"500 Lygon St"
-                                             suburb:@"Carlton"
-                                           postcode:@"3053"],
+                       [Property propertyWithAddess:@"120 Clarendon Street"
+                                             suburb:@"East melbourne"
+                                           postcode:@"3002"
+                                              photo:@"photo3"],
                        
-                       [Property propertyWithAddess:@"200 Johnston St"
-                                             suburb:@"Collingwood"
-                                           postcode:@"3066"],
+                       [Property propertyWithAddess:@"K Rd"
+                                             suburb:@"Werribee"
+                                           postcode:@"3030"
+                                              photo:@"photo4"],
                        
-                       [Property propertyWithAddess:@"123 High St"
-                                             suburb:@"Kew"
-                                           postcode:@"3101"],
+                       [Property propertyWithAddess:@"336 Glenferrie Road"
+                                             suburb:@"Malvern"
+                                           postcode:@"3144"
+                                              photo:@"photo5"],
                        
-                       [Property propertyWithAddess:@"600 Victoria St"
-                                             suburb:@"Richmond"
-                                           postcode:@"3121"],
+                       [Property propertyWithAddess:@"192 Hotham Street"
+                                             suburb:@"Elsternwick"
+                                           postcode:@"3185"
+                                              photo:@"photo6"],
                        
-                       [Property propertyWithAddess:@"680 Burke Rd"
-                                             suburb:@"Camberwell"
-                                           postcode:@"3124"],
+                       [Property propertyWithAddess:@"120-126 Toorak Rd West"
+                                             suburb:@"South Yarra"
+                                           postcode:@"3141"
+                                              photo:@"photo7"],
                        
-                       [Property propertyWithAddess:@"300 Mont Albert Rd"
-                                             suburb:@"Surrey Hills"
-                                           postcode:@"3127"],
+                       [Property propertyWithAddess:@"54 Mont Albert Rd"
+                                             suburb:@"Canterbury"
+                                           postcode:@"3126"
+                                              photo:@"photo8"],
                        
                          nil
                          ];
@@ -59,7 +69,7 @@
 
 - (void)dealloc
 {
-    self.properties = nil;
+    [properties release];
     
     [super dealloc];
 }
@@ -99,6 +109,7 @@
     Property *property = [self.properties objectAtIndex:indexPath.row];
     cell.textLabel.text = property.address;
     cell.detailTextLabel.text = property.suburb;
+    cell.imageView.image = property.photo;
                            
     return cell;
 }
