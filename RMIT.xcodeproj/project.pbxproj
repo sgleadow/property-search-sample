@@ -20,6 +20,8 @@
 		C90228A2141AE7FB00619E19 /* properties.json in Resources */ = {isa = PBXBuildFile; fileRef = C90228A1141AE7FB00619E19 /* properties.json */; };
 		C90228A4141AE88000619E19 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228A3141AE88000619E19 /* YAJLiOS.framework */; };
 		C90228A5141AE88000619E19 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228A3141AE88000619E19 /* YAJLiOS.framework */; };
+		C90228AB141AEBD800619E19 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228AA141AEBD800619E19 /* LRResty.framework */; };
+		C90228AC141AEBD800619E19 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228AA141AEBD800619E19 /* LRResty.framework */; };
 		C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA481419D9DD00064AA9 /* UIKit.framework */; };
 		C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4A1419D9DD00064AA9 /* Foundation.framework */; };
 		C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */; };
@@ -69,6 +71,7 @@
 		C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyCellBackgroundView.m; sourceTree = "<group>"; };
 		C90228A1141AE7FB00619E19 /* properties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = properties.json; sourceTree = "<group>"; };
 		C90228A3141AE88000619E19 /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLiOS.framework; sourceTree = "<group>"; };
+		C90228AA141AEBD800619E19 /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRResty.framework; sourceTree = "<group>"; };
 		C937DA441419D9DD00064AA9 /* RMIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C937DA481419D9DD00064AA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C937DA4A1419D9DD00064AA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +111,7 @@
 				C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
 				C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */,
 				C90228A4141AE88000619E19 /* YAJLiOS.framework in Frameworks */,
+				C90228AB141AEBD800619E19 /* LRResty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +124,7 @@
 				C937DA6C1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
 				C937DA6D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */,
 				C90228A5141AE88000619E19 /* YAJLiOS.framework in Frameworks */,
+				C90228AC141AEBD800619E19 /* LRResty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +154,7 @@
 		C937DA471419D9DD00064AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C90228AA141AEBD800619E19 /* LRResty.framework */,
 				C90228A3141AE88000619E19 /* YAJLiOS.framework */,
 				C937DA481419D9DD00064AA9 /* UIKit.framework */,
 				C937DA4A1419D9DD00064AA9 /* Foundation.framework */,
