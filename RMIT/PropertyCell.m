@@ -19,10 +19,14 @@
     {
         self.textLabel.backgroundColor = [UIColor clearColor];
         self.textLabel.font = [UIFont boldSystemFontOfSize:14];
+        self.textLabel.shadowColor = [UIColor whiteColor];
+        self.textLabel.shadowOffset = CGSizeMake(0, 1);
         self.textLabel.numberOfLines = 0;
         
         self.detailTextLabel.backgroundColor = [UIColor clearColor];
         self.detailTextLabel.font = [UIFont systemFontOfSize:12];
+        self.detailTextLabel.shadowColor = [UIColor whiteColor];
+        self.detailTextLabel.shadowOffset = CGSizeMake(0, 1);
         
         self.backgroundView = [[[PropertyCellBackgroundView alloc] initWithImageName:@"texture"] autorelease];
         self.selectedBackgroundView = [[[PropertyCellBackgroundView alloc] initWithImageName:@"texture-highlight"] autorelease];
