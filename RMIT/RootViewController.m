@@ -6,10 +6,13 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import <YAJLiOS/YAJL.h>
+
 #import "Property.h"
 #import "PropertyCell.h"
-#import <YAJLiOS/YAJL.h>
+#import "MBProgressHUD.h"
+
+#import "RootViewController.h"
 
 @implementation RootViewController
 
@@ -19,7 +22,7 @@
 {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
                                                                                            target:self
-                                                                                           action:@selector(loadProperties)];
+                                                                                           action:@selector(search)];
 }
 
 - (void)dealloc
@@ -32,10 +35,17 @@
 #pragma mark -
 #pragma mark Load properties
 
-- (void)loadProperties
+- (void)search
 {
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSDictionary *propertiesDict = [bundle yajl_JSONFromResource:@"properties.json"];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Loading properties";
+    [[LRResty client] get:@"http://dl.dropbox.com/u/6457632/properties.json"
+                 delegate:self];
+}
+
+- (void)restClient:(LRRestyClient *)client receivedResponse:(LRRestyResponse *)response;
+{
+    NSDictionary *propertiesDict = [[response responseData] yajl_JSON];
     
     NSMutableArray *loadedProperties = [NSMutableArray array];
     for (NSDictionary *dict in [propertiesDict valueForKey:@"properties"])
@@ -46,6 +56,7 @@
     
     self.properties = loadedProperties;
     [self.tableView reloadData];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 #pragma mark -
