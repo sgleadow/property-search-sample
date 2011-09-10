@@ -17,6 +17,23 @@
 
 - (void)awakeFromNib
 {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+                                                                                           target:self
+                                                                                           action:@selector(loadProperties)];
+}
+
+- (void)dealloc
+{
+    [properties release];
+    
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark Load properties
+
+- (void)loadProperties
+{
     NSBundle *bundle = [NSBundle mainBundle];
     NSDictionary *propertiesDict = [bundle yajl_JSONFromResource:@"properties.json"];
     
@@ -28,13 +45,7 @@
     }
     
     self.properties = loadedProperties;
-}
-
-- (void)dealloc
-{
-    [properties release];
-    
-    [super dealloc];
+    [self.tableView reloadData];
 }
 
 #pragma mark -
