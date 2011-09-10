@@ -37,9 +37,20 @@
 
 - (void)search
 {
+    [self.searchBar resignFirstResponder];
+    
+    NSString *url = @"http://rmit-property-search.heroku.com/search";
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    if (self.searchBar.text)
+    {
+        [params setValue:self.searchBar.text forKey:@"q"];
+    }
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Loading properties";
-    [[LRResty client] get:@"http://dl.dropbox.com/u/6457632/properties.json"
+    [[LRResty client] get:url
+               parameters:params
                  delegate:self];
 }
 
@@ -117,7 +128,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
 {
-    [self.searchBar resignFirstResponder];
+    [self search];
 }
 
 

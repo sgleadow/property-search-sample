@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <LRResty/LRResty.h>
 
-@interface RootViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, LRRestyClientResponseDelegate>
+@interface RootViewController : UIViewController <UITableViewDataSource,
+                                                  UITableViewDelegate,
+                                                  LRRestyClientResponseDelegate,
+                                                  UISearchBarDelegate>
 
 @property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
