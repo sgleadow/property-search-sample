@@ -27,13 +27,14 @@
     CGFloat width = bounds.size.width;
     CGFloat height = bounds.size.height;
     
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-    CGContextSetLineWidth(context, 1.0);
-    CGContextSetShadow(context, CGSizeMake(0, 1), 0);
-    CGContextSetShadowWithColor(context, CGSizeMake(0, 1), 0, [UIColor whiteColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextMoveToPoint(context, 0, .5);
+    CGContextAddLineToPoint(context, width, .5);
+    CGContextStrokePath(context);
     
-    CGContextMoveToPoint(context, 0, height-1.5);
-    CGContextAddLineToPoint(context, width, height-1.5);
+    CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
+    CGContextMoveToPoint(context, 0, height-.5);
+    CGContextAddLineToPoint(context, width, height-.5);
     CGContextStrokePath(context);
 }
 
