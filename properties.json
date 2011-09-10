@@ -1,0 +1,52 @@
+{
+    "properties" : [
+        {
+            "address" : "60-74 Buckingham Drive",
+            "suburb" : "Heidelberg",
+            "postcode" : "3084",
+            "photo" : "photo1.jpg"]
+        }
+        {
+            "address" : "cnr Williams Road & Lechlade Ave",
+            "suburb" : "South Yarra",
+            "postcode" : "3141" ,
+            "postcode" : "photo2.jpg"
+        },
+        {
+            "address" : "120 Clarendon Street",
+            "suburb" : "East melbourne",
+            "postcode" : "3002",
+            "postcode" : "photo3.jpg"
+        },
+        {
+            "address" : "K Rd",
+            "suburb" : "Werribee",
+            "postcode" : "3030",
+            "postcode" : "photo4.jpg"
+        },
+        {
+            "address" : "336 Glenferrie Road",
+            "suburb" : "Malvern",
+            "postcode" : "3144",
+            "postcode" : "photo5.jpg"
+        },
+        {
+            "address" : "192 Hotham Street",
+            "suburb" : "Elsternwick",
+            "postcode" : "3185",
+            "postcode" : "photo6.jpg"
+        },
+        {
+            "address" : "120-126 Toorak Rd West",
+            "suburb" : "South Yarra",
+            "postcode" : "3141",
+            "postcode" : "photo7.jpg"
+        },
+        {
+            "address" : "54 Mont Albert Rd",
+            "suburb" : "Canterbury",
+            "postcode" : "3126",
+            "photo" : "photo8.jpg"
+        }
+    ]
+}
