@@ -10,6 +10,8 @@
 
 @interface Property : NSObject
 
++ (Property *)propertyWithDictionary:(NSDictionary *)dict;
+
 + (Property *)propertyWithAddess:(NSString *)anAddress
                           suburb:(NSString *)aSuburb
                         postcode:(NSString *)aPostcode

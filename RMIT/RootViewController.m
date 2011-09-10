@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "Property.h"
 #import "PropertyCell.h"
+#import <YAJLiOS/YAJL.h>
 
 @implementation RootViewController
 
@@ -16,55 +17,17 @@
 
 - (void)awakeFromNib
 {
-    self.properties = [NSArray arrayWithObjects:
-                       
-                       [Property propertyWithAddess:@"Government House Dr"
-                                             suburb:@"Melbourne"
-                                           postcode:@"3004"
-                                              photo:@"photo9.jpg"],
-                       
-                       [Property propertyWithAddess:@"60-74 Buckingham Drive"
-                                             suburb:@"Heidelberg"
-                                           postcode:@"3084"
-                                              photo:@"photo1.jpg"],
-                       
-                       [Property propertyWithAddess:@"cnr Williams Road & Lechlade Ave"
-                                             suburb:@"South Yarra"
-                                           postcode:@"3141" 
-                                              photo:@"photo2.jpg"],
-                       
-                       [Property propertyWithAddess:@"120 Clarendon Street"
-                                             suburb:@"East melbourne"
-                                           postcode:@"3002"
-                                              photo:@"photo3.jpg"],
-                       
-                       [Property propertyWithAddess:@"K Rd"
-                                             suburb:@"Werribee"
-                                           postcode:@"3030"
-                                              photo:@"photo4.jpg"],
-                       
-                       [Property propertyWithAddess:@"336 Glenferrie Road"
-                                             suburb:@"Malvern"
-                                           postcode:@"3144"
-                                              photo:@"photo5.jpg"],
-                       
-                       [Property propertyWithAddess:@"192 Hotham Street"
-                                             suburb:@"Elsternwick"
-                                           postcode:@"3185"
-                                              photo:@"photo6.jpg"],
-                       
-                       [Property propertyWithAddess:@"120-126 Toorak Rd West"
-                                             suburb:@"South Yarra"
-                                           postcode:@"3141"
-                                              photo:@"photo7.jpg"],
-                       
-                       [Property propertyWithAddess:@"54 Mont Albert Rd"
-                                             suburb:@"Canterbury"
-                                           postcode:@"3126"
-                                              photo:@"photo8.jpg"],
-                       
-                         nil
-                         ];
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *propertiesDict = [bundle yajl_JSONFromResource:@"properties.json"];
+    
+    NSMutableArray *loadedProperties = [NSMutableArray array];
+    for (NSDictionary *dict in [propertiesDict valueForKey:@"properties"])
+    {
+        Property *property = [Property propertyWithDictionary:dict];
+        [loadedProperties addObject:property];
+    }
+    
+    self.properties = loadedProperties;
 }
 
 - (void)dealloc

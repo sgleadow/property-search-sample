@@ -12,6 +12,14 @@
 
 @synthesize address, suburb, postode, price, title, summary, photo;
 
++ (Property *)propertyWithDictionary:(NSDictionary *)dict
+{
+    return [Property propertyWithAddess:[dict valueForKey:@"address"]
+                                 suburb:[dict valueForKey:@"suburb"]
+                               postcode:[dict valueForKey:@"postcode"]
+                                  photo:[dict valueForKey:@"photo"]];
+}
+
 + (Property *)propertyWithAddess:(NSString *)anAddress
                           suburb:(NSString *)aSuburb
                         postcode:(NSString *)aPostcode
