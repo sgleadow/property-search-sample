@@ -25,4 +25,6 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *summary;
 
+- (NSString *)location;
+
 @end

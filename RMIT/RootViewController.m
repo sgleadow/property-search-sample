@@ -108,7 +108,7 @@
 
     Property *property = [self.properties objectAtIndex:indexPath.row];
     cell.textLabel.text = property.address;
-    cell.detailTextLabel.text = property.suburb;
+    cell.detailTextLabel.text = property.location;
     cell.imageView.image = property.photo;
                            
     return cell;

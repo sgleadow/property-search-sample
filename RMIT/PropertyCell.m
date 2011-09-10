@@ -19,6 +19,7 @@
     {
         self.textLabel.backgroundColor = [UIColor clearColor];
         self.textLabel.font = [UIFont boldSystemFontOfSize:14];
+        self.textLabel.numberOfLines = 0;
         
         self.detailTextLabel.backgroundColor = [UIColor clearColor];
         self.detailTextLabel.font = [UIFont systemFontOfSize:12];

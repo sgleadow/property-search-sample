@@ -38,4 +38,9 @@
     [super dealloc];
 }
 
+- (NSString *)location;
+{
+    return [NSString stringWithFormat:@"%@, %@", self.suburb.uppercaseString, self.postode];
+}
+
 @end
