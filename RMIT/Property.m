@@ -23,7 +23,7 @@
     property.suburb = aSuburb;
     property.postode = aPostcode;
     
-    property.photo = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg", photoName]];
+    property.photo = [UIImage imageNamed:photoName];
     
     return property;
 }

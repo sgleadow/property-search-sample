@@ -6,7 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "PropertyCell.h"
+#import "PropertyCellBackgroundView.h"
 
 @implementation PropertyCell
 
@@ -15,13 +18,13 @@
     if ((self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier]))
     {
         self.textLabel.backgroundColor = [UIColor clearColor];
+        self.textLabel.font = [UIFont boldSystemFontOfSize:14];
+        
         self.detailTextLabel.backgroundColor = [UIColor clearColor];
+        self.detailTextLabel.font = [UIFont systemFontOfSize:12];
         
-        self.backgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
-        self.backgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]];
-        
-        self.selectedBackgroundView = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
-        self.selectedBackgroundView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"texture-highlight"]];
+        self.backgroundView = [[[PropertyCellBackgroundView alloc] initWithImageName:@"texture"] autorelease];
+        self.selectedBackgroundView = [[[PropertyCellBackgroundView alloc] initWithImageName:@"texture-highlight"] autorelease];
     }
     
     return self;

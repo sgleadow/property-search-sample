@@ -16,6 +16,7 @@
 		C902289A141AD66B00619E19 /* photo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9022891141AD66B00619E19 /* photo7.jpg */; };
 		C902289B141AD66B00619E19 /* photo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9022892141AD66B00619E19 /* photo8.jpg */; };
 		C902289C141AD66B00619E19 /* photo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9022893141AD66B00619E19 /* photo9.jpg */; };
+		C90228A0141AE04200619E19 /* PropertyCellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */; };
 		C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA481419D9DD00064AA9 /* UIKit.framework */; };
 		C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4A1419D9DD00064AA9 /* Foundation.framework */; };
 		C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		C9022891141AD66B00619E19 /* photo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo7.jpg; path = RMIT/photo7.jpg; sourceTree = "<group>"; };
 		C9022892141AD66B00619E19 /* photo8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo8.jpg; path = RMIT/photo8.jpg; sourceTree = "<group>"; };
 		C9022893141AD66B00619E19 /* photo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo9.jpg; path = RMIT/photo9.jpg; sourceTree = "<group>"; };
+		C902289E141AE04200619E19 /* PropertyCellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyCellBackgroundView.h; sourceTree = "<group>"; };
+		C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyCellBackgroundView.m; sourceTree = "<group>"; };
 		C937DA441419D9DD00064AA9 /* RMIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C937DA481419D9DD00064AA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C937DA4A1419D9DD00064AA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,8 @@
 				C94B23D71419E8CF004ACA73 /* Property.m */,
 				C96773491419FD23007078A6 /* PropertyCell.h */,
 				C967734A1419FD23007078A6 /* PropertyCell.m */,
+				C902289E141AE04200619E19 /* PropertyCellBackgroundView.h */,
+				C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */,
 			);
 			path = RMIT;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 				C937DA5F1419D9DD00064AA9 /* RootViewController.m in Sources */,
 				C94B23D81419E8CF004ACA73 /* Property.m in Sources */,
 				C967734B1419FD23007078A6 /* PropertyCell.m in Sources */,
+				C90228A0141AE04200619E19 /* PropertyCellBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
