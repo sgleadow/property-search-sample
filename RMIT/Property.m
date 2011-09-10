@@ -17,13 +17,15 @@
     return [Property propertyWithAddess:[dict valueForKey:@"address"]
                                  suburb:[dict valueForKey:@"suburb"]
                                postcode:[dict valueForKey:@"postcode"]
-                                  photo:[dict valueForKey:@"photo"]];
+                                  photo:[dict valueForKey:@"photo"]
+                                summary:[dict valueForKey:@"summary"]];
 }
 
 + (Property *)propertyWithAddess:(NSString *)anAddress
                           suburb:(NSString *)aSuburb
                         postcode:(NSString *)aPostcode
-                           photo:(NSString *)photoName;
+                           photo:(NSString *)photoName
+                         summary:(NSString *)aSummary;
 {
     Property *property = [[[Property alloc] init] autorelease];
     
@@ -32,6 +34,7 @@
     property.postode = aPostcode;
     
     property.photo = [UIImage imageNamed:photoName];
+    property.summary = aSummary;
     
     return property;
 }

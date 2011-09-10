@@ -11,6 +11,7 @@
 #import "Property.h"
 #import "PropertyCell.h"
 #import "MBProgressHUD.h"
+#import "DetailViewController.h"
 
 #import "RootViewController.h"
 
@@ -76,6 +77,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self search];
 }
 
 - (void)viewDidUnload
@@ -115,7 +117,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    Property *property = [self.properties objectAtIndex:indexPath.row];
+    DetailViewController *controller = [[[DetailViewController alloc] initWithProperty:property] autorelease];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;

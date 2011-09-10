@@ -15,7 +15,8 @@
 + (Property *)propertyWithAddess:(NSString *)anAddress
                           suburb:(NSString *)aSuburb
                         postcode:(NSString *)aPostcode
-                           photo:(NSString *)photoName;
+                           photo:(NSString *)photoName
+                         summary:(NSString *)summary;
 
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *suburb;
