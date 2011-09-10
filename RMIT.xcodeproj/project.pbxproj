@@ -18,6 +18,8 @@
 		C902289C141AD66B00619E19 /* photo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9022893141AD66B00619E19 /* photo9.jpg */; };
 		C90228A0141AE04200619E19 /* PropertyCellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */; };
 		C90228A2141AE7FB00619E19 /* properties.json in Resources */ = {isa = PBXBuildFile; fileRef = C90228A1141AE7FB00619E19 /* properties.json */; };
+		C90228A4141AE88000619E19 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228A3141AE88000619E19 /* YAJLiOS.framework */; };
+		C90228A5141AE88000619E19 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228A3141AE88000619E19 /* YAJLiOS.framework */; };
 		C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA481419D9DD00064AA9 /* UIKit.framework */; };
 		C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4A1419D9DD00064AA9 /* Foundation.framework */; };
 		C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */; };
@@ -66,6 +68,7 @@
 		C902289E141AE04200619E19 /* PropertyCellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyCellBackgroundView.h; sourceTree = "<group>"; };
 		C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyCellBackgroundView.m; sourceTree = "<group>"; };
 		C90228A1141AE7FB00619E19 /* properties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = properties.json; sourceTree = "<group>"; };
+		C90228A3141AE88000619E19 /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLiOS.framework; sourceTree = "<group>"; };
 		C937DA441419D9DD00064AA9 /* RMIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C937DA481419D9DD00064AA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C937DA4A1419D9DD00064AA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -104,6 +107,7 @@
 				C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */,
 				C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
 				C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */,
+				C90228A4141AE88000619E19 /* YAJLiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +119,7 @@
 				C937DA6B1419D9DD00064AA9 /* UIKit.framework in Frameworks */,
 				C937DA6C1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
 				C937DA6D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */,
+				C90228A5141AE88000619E19 /* YAJLiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +149,7 @@
 		C937DA471419D9DD00064AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C90228A3141AE88000619E19 /* YAJLiOS.framework */,
 				C937DA481419D9DD00064AA9 /* UIKit.framework */,
 				C937DA4A1419D9DD00064AA9 /* Foundation.framework */,
 				C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */,
@@ -427,6 +433,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-Objc",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -446,6 +456,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-Objc",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -454,6 +468,10 @@
 		C937DA7D1419D9DD00064AA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
 				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
@@ -465,6 +483,10 @@
 		C937DA7E1419D9DD00064AA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
 				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
@@ -480,6 +502,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
@@ -497,6 +520,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
