@@ -22,6 +22,8 @@
 		C90228A5141AE88000619E19 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228A3141AE88000619E19 /* YAJLiOS.framework */; };
 		C90228AB141AEBD800619E19 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228AA141AEBD800619E19 /* LRResty.framework */; };
 		C90228AC141AEBD800619E19 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228AA141AEBD800619E19 /* LRResty.framework */; };
+		C90228B0141AF3C200619E19 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C90228AF141AF3C200619E19 /* MBProgressHUD.m */; };
+		C90228B1141AF3C200619E19 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C90228AF141AF3C200619E19 /* MBProgressHUD.m */; };
 		C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA481419D9DD00064AA9 /* UIKit.framework */; };
 		C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4A1419D9DD00064AA9 /* Foundation.framework */; };
 		C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C937DA4C1419D9DD00064AA9 /* CoreGraphics.framework */; };
@@ -72,6 +74,8 @@
 		C90228A1141AE7FB00619E19 /* properties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = properties.json; sourceTree = "<group>"; };
 		C90228A3141AE88000619E19 /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLiOS.framework; sourceTree = "<group>"; };
 		C90228AA141AEBD800619E19 /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRResty.framework; sourceTree = "<group>"; };
+		C90228AE141AF3C200619E19 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C90228AF141AF3C200619E19 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		C937DA441419D9DD00064AA9 /* RMIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C937DA481419D9DD00064AA9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C937DA4A1419D9DD00064AA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,12 +135,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C90228AD141AF3C100619E19 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C90228AE141AF3C200619E19 /* MBProgressHUD.h */,
+				C90228AF141AF3C200619E19 /* MBProgressHUD.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
 		C937DA391419D9DD00064AA9 = {
 			isa = PBXGroup;
 			children = (
 				C96773401419F859007078A6 /* Resources */,
 				C937DA4E1419D9DD00064AA9 /* RMIT */,
 				C937DA701419D9DD00064AA9 /* RMITTests */,
+				C90228AD141AF3C100619E19 /* lib */,
 				C937DA471419D9DD00064AA9 /* Frameworks */,
 				C937DA451419D9DD00064AA9 /* Products */,
 			);
@@ -360,6 +374,7 @@
 				C94B23D81419E8CF004ACA73 /* Property.m in Sources */,
 				C967734B1419FD23007078A6 /* PropertyCell.m in Sources */,
 				C90228A0141AE04200619E19 /* PropertyCellBackgroundView.m in Sources */,
+				C90228B0141AF3C200619E19 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +384,7 @@
 			files = (
 				C937DA791419D9DD00064AA9 /* RMITTests.m in Sources */,
 				C94B23D91419E8CF004ACA73 /* Property.m in Sources */,
+				C90228B1141AF3C200619E19 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
