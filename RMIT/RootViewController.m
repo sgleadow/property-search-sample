@@ -17,7 +17,7 @@
 
 @implementation RootViewController
 
-@synthesize searchBar, tableView, properties;
+@synthesize searchBar, tableView, properties, pullRefreshView;
 
 - (void)dealloc
 {
@@ -60,6 +60,7 @@
     }
     
     self.properties = loadedProperties;
+    [self.pullRefreshView finishedLoading];
     [self.tableView reloadData];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
@@ -70,6 +71,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.pullRefreshView = [[[PullToRefreshView alloc] initWithScrollView:self.tableView] autorelease];
+    [self.pullRefreshView setDelegate:self];
+    [self.tableView addSubview:self.pullRefreshView];
+    
     [self search];
 }
 
@@ -128,5 +134,12 @@
     [self search];
 }
 
+#pragma mark -
+#pragma mark PullToRefreshViewDelegate
+
+- (void)pullToRefreshViewShouldRefresh:(PullToRefreshView *)view;
+{
+    [self search];
+}
 
 @end

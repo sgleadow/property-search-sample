@@ -8,15 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import <LRResty/LRResty.h>
+#import "PullToRefreshView.h"
 
 @interface RootViewController : UIViewController <UITableViewDataSource,
                                                   UITableViewDelegate,
                                                   LRRestyClientResponseDelegate,
-                                                  UISearchBarDelegate>
+                                                  UISearchBarDelegate,
+                                                  PullToRefreshViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSArray *properties;
+@property (nonatomic, retain) PullToRefreshView *pullRefreshView;
 
 -(IBAction)search;
 
