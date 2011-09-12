@@ -46,6 +46,10 @@
 		C937DA751419D9DD00064AA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C937DA731419D9DD00064AA9 /* InfoPlist.strings */; };
 		C937DA771419D9DD00064AA9 /* RMITTests.h in Resources */ = {isa = PBXBuildFile; fileRef = C937DA761419D9DD00064AA9 /* RMITTests.h */; };
 		C937DA791419D9DD00064AA9 /* RMITTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C937DA781419D9DD00064AA9 /* RMITTests.m */; };
+		C93FECEC141DEE0D007F528F /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C93FECE8141DEE0D007F528F /* arrow.png */; };
+		C93FECED141DEE0D007F528F /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C93FECE9141DEE0D007F528F /* arrow@2x.png */; };
+		C93FECEE141DEE0D007F528F /* PullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93FECEB141DEE0D007F528F /* PullToRefreshView.m */; };
+		C93FECF1141DEEFB007F528F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93FECF0141DEEFB007F528F /* QuartzCore.framework */; };
 		C94B23D81419E8CF004ACA73 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = C94B23D71419E8CF004ACA73 /* Property.m */; };
 		C94B23D91419E8CF004ACA73 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = C94B23D71419E8CF004ACA73 /* Property.m */; };
 		C96773421419F86C007078A6 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = C96773411419F86C007078A6 /* texture.png */; };
@@ -106,6 +110,11 @@
 		C937DA741419D9DD00064AA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C937DA761419D9DD00064AA9 /* RMITTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMITTests.h; sourceTree = "<group>"; };
 		C937DA781419D9DD00064AA9 /* RMITTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMITTests.m; sourceTree = "<group>"; };
+		C93FECE8141DEE0D007F528F /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		C93FECE9141DEE0D007F528F /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		C93FECEA141DEE0D007F528F /* PullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshView.h; sourceTree = "<group>"; };
+		C93FECEB141DEE0D007F528F /* PullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefreshView.m; sourceTree = "<group>"; };
+		C93FECF0141DEEFB007F528F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C94B23D61419E8CF004ACA73 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
 		C94B23D71419E8CF004ACA73 /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
 		C96773411419F86C007078A6 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = texture.png; path = RMIT/texture.png; sourceTree = "<group>"; };
@@ -121,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93FECF1141DEEFB007F528F /* QuartzCore.framework in Frameworks */,
 				C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */,
 				C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
 				C937DA4D1419D9DD00064AA9 /* CoreGraphics.framework in Frameworks */,
@@ -148,6 +158,10 @@
 		C90228AD141AF3C100619E19 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				C93FECE8141DEE0D007F528F /* arrow.png */,
+				C93FECE9141DEE0D007F528F /* arrow@2x.png */,
+				C93FECEA141DEE0D007F528F /* PullToRefreshView.h */,
+				C93FECEB141DEE0D007F528F /* PullToRefreshView.m */,
 				C90228AE141AF3C200619E19 /* MBProgressHUD.h */,
 				C90228AF141AF3C200619E19 /* MBProgressHUD.m */,
 			);
@@ -157,6 +171,7 @@
 		C937DA391419D9DD00064AA9 = {
 			isa = PBXGroup;
 			children = (
+				C93FECF0141DEEFB007F528F /* QuartzCore.framework */,
 				C96773401419F859007078A6 /* Resources */,
 				C937DA4E1419D9DD00064AA9 /* RMIT */,
 				C937DA701419D9DD00064AA9 /* RMITTests */,
@@ -349,6 +364,8 @@
 				C90228A2141AE7FB00619E19 /* properties.json in Resources */,
 				C90228B7141B034F00619E19 /* DetailViewController.xib in Resources */,
 				C90228BA141B14DC00619E19 /* photo10.jpg in Resources */,
+				C93FECEC141DEE0D007F528F /* arrow.png in Resources */,
+				C93FECED141DEE0D007F528F /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +411,7 @@
 				C90228A0141AE04200619E19 /* PropertyCellBackgroundView.m in Sources */,
 				C90228B0141AF3C200619E19 /* MBProgressHUD.m in Sources */,
 				C90228B5141B034F00619E19 /* DetailViewController.m in Sources */,
+				C93FECEE141DEE0D007F528F /* PullToRefreshView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
