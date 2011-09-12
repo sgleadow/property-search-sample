@@ -180,6 +180,7 @@
 							<reference ref="702399397"/>
 						</object>
 						<reference key="parent" ref="0"/>
+						<string key="objectName">View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">21</int>

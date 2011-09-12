@@ -82,7 +82,10 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    
+    [tableView release];
+    [searchBar release];
+    [pullRefreshView release];
+  
 }
 
 #pragma mark -
