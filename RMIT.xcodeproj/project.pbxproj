@@ -171,7 +171,6 @@
 		C937DA391419D9DD00064AA9 = {
 			isa = PBXGroup;
 			children = (
-				C93FECF0141DEEFB007F528F /* QuartzCore.framework */,
 				C96773401419F859007078A6 /* Resources */,
 				C937DA4E1419D9DD00064AA9 /* RMIT */,
 				C937DA701419D9DD00064AA9 /* RMITTests */,
@@ -193,6 +192,7 @@
 		C937DA471419D9DD00064AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C93FECF0141DEEFB007F528F /* QuartzCore.framework */,
 				C90228AA141AEBD800619E19 /* LRResty.framework */,
 				C90228A3141AE88000619E19 /* YAJLiOS.framework */,
 				C937DA481419D9DD00064AA9 /* UIKit.framework */,
