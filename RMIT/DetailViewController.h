@@ -20,5 +20,6 @@
 @property (nonatomic, retain) IBOutlet UILabel *location;
 @property (nonatomic, retain) IBOutlet UIImageView *photo;
 @property (nonatomic, retain) IBOutlet UILabel *summary;
+@property (nonatomic, retain) IBOutlet UILabel *description;
 
 @end
