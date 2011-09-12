@@ -18,4 +18,6 @@
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 @property (nonatomic, copy) NSArray *properties;
 
+-(IBAction)search;
+
 @end

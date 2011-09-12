@@ -19,13 +19,6 @@
 
 @synthesize searchBar, tableView, properties;
 
-- (void)awakeFromNib
-{
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
-                                                                                           target:self
-                                                                                           action:@selector(search)];
-}
-
 - (void)dealloc
 {
     [properties release];
@@ -36,7 +29,7 @@
 #pragma mark -
 #pragma mark Load properties
 
-- (void)search
+-(IBAction)search
 {
     [self.searchBar resignFirstResponder];
     
