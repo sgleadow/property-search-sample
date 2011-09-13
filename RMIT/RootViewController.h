@@ -11,7 +11,8 @@
 #import "PullToRefreshView.h"
 
 @interface RootViewController : UIViewController <UITableViewDataSource,
-                                                  UITableViewDelegate>
+                                                  UITableViewDelegate,
+                                                  LRRestyClientResponseDelegate>
 
 @property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;

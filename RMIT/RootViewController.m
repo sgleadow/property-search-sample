@@ -33,25 +33,7 @@
 {
     [super viewDidLoad];
     
-    self.properties = [NSArray arrayWithObjects:
-                       [Property propertyWithAddess:@"1 Something St"
-                                             suburb:@"Melbourne"
-                                           postcode:@"3000"
-                                              photo:@"photo1.jpg"
-                                            summary:nil],
-                       
-                       [Property propertyWithAddess:@"2 Another Rd"
-                                             suburb:@"Sydney"
-                                           postcode:@"2000"
-                                              photo:@"photo2.jpg"
-                                            summary:nil],
-                       
-                       [Property propertyWithAddess:@"3 Some other St"
-                                             suburb:@"Brisbane"
-                                           postcode:@"4000"
-                                              photo:@"photo3.jpg"
-                                            summary:nil],
-                       nil];
+    [self search];
 }
 
 - (void)viewDidUnload
@@ -94,7 +76,19 @@
 
 - (IBAction)search
 {
+    [[LRResty client] get:@"http://rmit-property-search.heroku.com/search"
+                 delegate:self];
+}
+
+#pragma mark -
+#pragma mark LRRestyClientResponseDelegate
+
+- (void)restClient:(LRRestyClient *)client
+  receivedResponse:(LRRestyResponse *)response;
+{
+    NSData *data = [response responseData];
     
+    // convert data to property objects
 }
 
 @end
