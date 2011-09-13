@@ -20,4 +20,17 @@
     return self;
 }
 
+- (void)drawRect:(CGRect)rect
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGFloat width = self.bounds.size.width;
+    CGFloat height = self.bounds.size.height;
+    
+    [[UIColor darkGrayColor] set];
+    
+    CGContextMoveToPoint(context, 0, height-0.5);
+    CGContextAddLineToPoint(context, width, height-0.5);
+    CGContextStrokePath(context);
+}
+
 @end
