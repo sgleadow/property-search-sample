@@ -23,14 +23,8 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGRect bounds = self.bounds;
-    CGFloat width = bounds.size.width;
-    CGFloat height = bounds.size.height;
-    
-    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
-    CGContextMoveToPoint(context, 0, .5);
-    CGContextAddLineToPoint(context, width, .5);
-    CGContextStrokePath(context);
+    CGFloat width = self.bounds.size.width;
+    CGFloat height = self.bounds.size.height;
     
     CGContextSetStrokeColorWithColor(context, [UIColor darkGrayColor].CGColor);
     CGContextMoveToPoint(context, 0, height-.5);

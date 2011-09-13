@@ -10,6 +10,4 @@
 
 @interface PropertyCell : UITableViewCell
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
-
 @end

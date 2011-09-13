@@ -36,15 +36,21 @@
     self.properties = [NSArray arrayWithObjects:
                        [Property propertyWithAddess:@"1 Something St"
                                              suburb:@"Melbourne"
-                                           postcode:@"3000"],
+                                           postcode:@"3000"
+                                              photo:@"photo1.jpg"
+                                            summary:nil],
                        
                        [Property propertyWithAddess:@"2 Another Rd"
                                              suburb:@"Sydney"
-                                           postcode:@"2000"],
+                                           postcode:@"2000"
+                                              photo:@"photo2.jpg"
+                                            summary:nil],
                        
                        [Property propertyWithAddess:@"3 Some other St"
                                              suburb:@"Brisbane"
-                                           postcode:@"4000"],
+                                           postcode:@"4000"
+                                              photo:@"photo3.jpg"
+                                            summary:nil],
                        nil];
 }
 
@@ -71,13 +77,14 @@
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil)
     {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+        cell = [[[PropertyCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:cellIdentifier] autorelease];
     }
     
     Property *property = [self.properties objectAtIndex:indexPath.row];
     cell.textLabel.text = property.address;
     cell.detailTextLabel.text = property.location;
+    cell.imageView.image = property.photo;
                            
     return cell;
 }
