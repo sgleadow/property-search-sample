@@ -19,11 +19,6 @@
     {
         self.property = aProperty;
         self.title = @"Property";
-        
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Show"
-                                                                                  style:UIBarButtonItemStylePlain
-                                                                                 target:self
-                                                                                 action:@selector(show)];
     }
     
     return self;
@@ -42,23 +37,19 @@
     [super dealloc];
 }
 
-
-- (void)show
-{
-    self.summary.text = self.property.summary;
-}
-
 #pragma mark -
 #pragma mark UIViewController
 
 - (void)viewDidLoad;
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]];
+    UIImage *bg = [UIImage imageNamed:@"texture"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:bg];
     
     self.address.text = self.property.address;
     self.location.text = self.property.location;
     self.photo.image = self.property.photo;
+    self.summary.text = self.property.summary;
     
     CALayer *layer = self.photo.layer;
     layer.shadowOpacity = 1;
