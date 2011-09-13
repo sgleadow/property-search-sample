@@ -52,6 +52,35 @@
 		C93FECF1141DEEFB007F528F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93FECF0141DEEFB007F528F /* QuartzCore.framework */; };
 		C94B23D81419E8CF004ACA73 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = C94B23D71419E8CF004ACA73 /* Property.m */; };
 		C94B23D91419E8CF004ACA73 /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = C94B23D71419E8CF004ACA73 /* Property.m */; };
+		C95EAE91141EE8940013809D /* config in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE5E141EE8940013809D /* config */; };
+		C95EAE92141EE8940013809D /* description in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE5F141EE8940013809D /* description */; };
+		C95EAE93141EE8940013809D /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE60141EE8940013809D /* HEAD */; };
+		C95EAE94141EE8940013809D /* applypatch-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE62141EE8940013809D /* applypatch-msg.sample */; };
+		C95EAE95141EE8940013809D /* commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE63141EE8940013809D /* commit-msg.sample */; };
+		C95EAE96141EE8940013809D /* post-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE64141EE8940013809D /* post-commit.sample */; };
+		C95EAE97141EE8940013809D /* post-receive.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE65141EE8940013809D /* post-receive.sample */; };
+		C95EAE98141EE8940013809D /* post-update.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE66141EE8940013809D /* post-update.sample */; };
+		C95EAE99141EE8940013809D /* pre-applypatch.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE67141EE8940013809D /* pre-applypatch.sample */; };
+		C95EAE9A141EE8940013809D /* pre-commit.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE68141EE8940013809D /* pre-commit.sample */; };
+		C95EAE9B141EE8940013809D /* pre-rebase.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE69141EE8940013809D /* pre-rebase.sample */; };
+		C95EAE9C141EE8940013809D /* prepare-commit-msg.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE6A141EE8940013809D /* prepare-commit-msg.sample */; };
+		C95EAE9D141EE8940013809D /* update.sample in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE6B141EE8940013809D /* update.sample */; };
+		C95EAE9E141EE8940013809D /* index in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE6C141EE8940013809D /* index */; };
+		C95EAE9F141EE8940013809D /* exclude in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE6E141EE8940013809D /* exclude */; };
+		C95EAEA0141EE8940013809D /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE70141EE8940013809D /* HEAD */; };
+		C95EAEA1141EE8940013809D /* master in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE73141EE8940013809D /* master */; };
+		C95EAEA2141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.idx in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE77141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.idx */; };
+		C95EAEA3141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.pack in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE78141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.pack */; };
+		C95EAEA4141EE8940013809D /* packed-refs in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE79141EE8940013809D /* packed-refs */; };
+		C95EAEA5141EE8940013809D /* master in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE7C141EE8940013809D /* master */; };
+		C95EAEA6141EE8940013809D /* HEAD in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE7F141EE8940013809D /* HEAD */; };
+		C95EAEA7141EE8940013809D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE81141EE8940013809D /* LICENSE */; };
+		C95EAEA8141EE8940013809D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C95EAE82141EE8940013809D /* README.md */; };
+		C95EAEA9141EE8940013809D /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C95EAE84141EE8940013809D /* SDImageCache.m */; };
+		C95EAEAA141EE8940013809D /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = C95EAE88141EE8940013809D /* SDWebImageDownloader.m */; };
+		C95EAEAB141EE8940013809D /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C95EAE8B141EE8940013809D /* SDWebImageManager.m */; };
+		C95EAEAC141EE8940013809D /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C95EAE8E141EE8940013809D /* UIButton+WebCache.m */; };
+		C95EAEAD141EE8940013809D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C95EAE90141EE8940013809D /* UIImageView+WebCache.m */; };
 		C96773421419F86C007078A6 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = C96773411419F86C007078A6 /* texture.png */; };
 		C96773441419FA76007078A6 /* texture-highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C96773431419FA76007078A6 /* texture-highlight.png */; };
 		C96773471419FBB9007078A6 /* shadow-bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = C96773451419FBB9007078A6 /* shadow-bottom.png */; };
@@ -117,6 +146,44 @@
 		C93FECF0141DEEFB007F528F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C94B23D61419E8CF004ACA73 /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
 		C94B23D71419E8CF004ACA73 /* Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
+		C95EAE5E141EE8940013809D /* config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config; sourceTree = "<group>"; };
+		C95EAE5F141EE8940013809D /* description */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = description; sourceTree = "<group>"; };
+		C95EAE60141EE8940013809D /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		C95EAE62141EE8940013809D /* applypatch-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "applypatch-msg.sample"; sourceTree = "<group>"; };
+		C95EAE63141EE8940013809D /* commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "commit-msg.sample"; sourceTree = "<group>"; };
+		C95EAE64141EE8940013809D /* post-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-commit.sample"; sourceTree = "<group>"; };
+		C95EAE65141EE8940013809D /* post-receive.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-receive.sample"; sourceTree = "<group>"; };
+		C95EAE66141EE8940013809D /* post-update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "post-update.sample"; sourceTree = "<group>"; };
+		C95EAE67141EE8940013809D /* pre-applypatch.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-applypatch.sample"; sourceTree = "<group>"; };
+		C95EAE68141EE8940013809D /* pre-commit.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-commit.sample"; sourceTree = "<group>"; };
+		C95EAE69141EE8940013809D /* pre-rebase.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "pre-rebase.sample"; sourceTree = "<group>"; };
+		C95EAE6A141EE8940013809D /* prepare-commit-msg.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "prepare-commit-msg.sample"; sourceTree = "<group>"; };
+		C95EAE6B141EE8940013809D /* update.sample */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = update.sample; sourceTree = "<group>"; };
+		C95EAE6C141EE8940013809D /* index */ = {isa = PBXFileReference; lastKnownFileType = file; path = index; sourceTree = "<group>"; };
+		C95EAE6E141EE8940013809D /* exclude */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exclude; sourceTree = "<group>"; };
+		C95EAE70141EE8940013809D /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		C95EAE73141EE8940013809D /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
+		C95EAE77141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.idx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-eea4367ce74625a8f8c136cd48a8343cd430c902.idx"; sourceTree = "<group>"; };
+		C95EAE78141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pack-eea4367ce74625a8f8c136cd48a8343cd430c902.pack"; sourceTree = "<group>"; };
+		C95EAE79141EE8940013809D /* packed-refs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "packed-refs"; sourceTree = "<group>"; };
+		C95EAE7C141EE8940013809D /* master */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = master; sourceTree = "<group>"; };
+		C95EAE7F141EE8940013809D /* HEAD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HEAD; sourceTree = "<group>"; };
+		C95EAE81141EE8940013809D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C95EAE82141EE8940013809D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C95EAE83141EE8940013809D /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		C95EAE84141EE8940013809D /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		C95EAE85141EE8940013809D /* SDImageCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCacheDelegate.h; sourceTree = "<group>"; };
+		C95EAE86141EE8940013809D /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		C95EAE87141EE8940013809D /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		C95EAE88141EE8940013809D /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		C95EAE89141EE8940013809D /* SDWebImageDownloaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderDelegate.h; sourceTree = "<group>"; };
+		C95EAE8A141EE8940013809D /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		C95EAE8B141EE8940013809D /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		C95EAE8C141EE8940013809D /* SDWebImageManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManagerDelegate.h; sourceTree = "<group>"; };
+		C95EAE8D141EE8940013809D /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		C95EAE8E141EE8940013809D /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		C95EAE8F141EE8940013809D /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		C95EAE90141EE8940013809D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C96773411419F86C007078A6 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = texture.png; path = RMIT/texture.png; sourceTree = "<group>"; };
 		C96773431419FA76007078A6 /* texture-highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "texture-highlight.png"; path = "RMIT/texture-highlight.png"; sourceTree = "<group>"; };
 		C96773451419FBB9007078A6 /* shadow-bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shadow-bottom.png"; path = "RMIT/shadow-bottom.png"; sourceTree = "<group>"; };
@@ -158,6 +225,7 @@
 		C90228AD141AF3C100619E19 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				C95EAE5B141EE8940013809D /* SDWebImage */,
 				C93FECE8141DEE0D007F528F /* arrow.png */,
 				C93FECE9141DEE0D007F528F /* arrow@2x.png */,
 				C93FECEA141DEE0D007F528F /* PullToRefreshView.h */,
@@ -254,6 +322,171 @@
 				C937DA731419D9DD00064AA9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C95EAE5B141EE8940013809D /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE5C141EE8940013809D /* .git */,
+				C95EAE81141EE8940013809D /* LICENSE */,
+				C95EAE82141EE8940013809D /* README.md */,
+				C95EAE83141EE8940013809D /* SDImageCache.h */,
+				C95EAE84141EE8940013809D /* SDImageCache.m */,
+				C95EAE85141EE8940013809D /* SDImageCacheDelegate.h */,
+				C95EAE86141EE8940013809D /* SDWebImageCompat.h */,
+				C95EAE87141EE8940013809D /* SDWebImageDownloader.h */,
+				C95EAE88141EE8940013809D /* SDWebImageDownloader.m */,
+				C95EAE89141EE8940013809D /* SDWebImageDownloaderDelegate.h */,
+				C95EAE8A141EE8940013809D /* SDWebImageManager.h */,
+				C95EAE8B141EE8940013809D /* SDWebImageManager.m */,
+				C95EAE8C141EE8940013809D /* SDWebImageManagerDelegate.h */,
+				C95EAE8D141EE8940013809D /* UIButton+WebCache.h */,
+				C95EAE8E141EE8940013809D /* UIButton+WebCache.m */,
+				C95EAE8F141EE8940013809D /* UIImageView+WebCache.h */,
+				C95EAE90141EE8940013809D /* UIImageView+WebCache.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		C95EAE5C141EE8940013809D /* .git */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE5D141EE8940013809D /* branches */,
+				C95EAE5E141EE8940013809D /* config */,
+				C95EAE5F141EE8940013809D /* description */,
+				C95EAE60141EE8940013809D /* HEAD */,
+				C95EAE61141EE8940013809D /* hooks */,
+				C95EAE6C141EE8940013809D /* index */,
+				C95EAE6D141EE8940013809D /* info */,
+				C95EAE6F141EE8940013809D /* logs */,
+				C95EAE74141EE8940013809D /* objects */,
+				C95EAE79141EE8940013809D /* packed-refs */,
+				C95EAE7A141EE8940013809D /* refs */,
+			);
+			path = .git;
+			sourceTree = "<group>";
+		};
+		C95EAE5D141EE8940013809D /* branches */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = branches;
+			sourceTree = "<group>";
+		};
+		C95EAE61141EE8940013809D /* hooks */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE62141EE8940013809D /* applypatch-msg.sample */,
+				C95EAE63141EE8940013809D /* commit-msg.sample */,
+				C95EAE64141EE8940013809D /* post-commit.sample */,
+				C95EAE65141EE8940013809D /* post-receive.sample */,
+				C95EAE66141EE8940013809D /* post-update.sample */,
+				C95EAE67141EE8940013809D /* pre-applypatch.sample */,
+				C95EAE68141EE8940013809D /* pre-commit.sample */,
+				C95EAE69141EE8940013809D /* pre-rebase.sample */,
+				C95EAE6A141EE8940013809D /* prepare-commit-msg.sample */,
+				C95EAE6B141EE8940013809D /* update.sample */,
+			);
+			path = hooks;
+			sourceTree = "<group>";
+		};
+		C95EAE6D141EE8940013809D /* info */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE6E141EE8940013809D /* exclude */,
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		C95EAE6F141EE8940013809D /* logs */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE70141EE8940013809D /* HEAD */,
+				C95EAE71141EE8940013809D /* refs */,
+			);
+			path = logs;
+			sourceTree = "<group>";
+		};
+		C95EAE71141EE8940013809D /* refs */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE72141EE8940013809D /* heads */,
+			);
+			path = refs;
+			sourceTree = "<group>";
+		};
+		C95EAE72141EE8940013809D /* heads */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE73141EE8940013809D /* master */,
+			);
+			path = heads;
+			sourceTree = "<group>";
+		};
+		C95EAE74141EE8940013809D /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE75141EE8940013809D /* info */,
+				C95EAE76141EE8940013809D /* pack */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		C95EAE75141EE8940013809D /* info */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = info;
+			sourceTree = "<group>";
+		};
+		C95EAE76141EE8940013809D /* pack */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE77141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.idx */,
+				C95EAE78141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.pack */,
+			);
+			path = pack;
+			sourceTree = "<group>";
+		};
+		C95EAE7A141EE8940013809D /* refs */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE7B141EE8940013809D /* heads */,
+				C95EAE7D141EE8940013809D /* remotes */,
+				C95EAE80141EE8940013809D /* tags */,
+			);
+			path = refs;
+			sourceTree = "<group>";
+		};
+		C95EAE7B141EE8940013809D /* heads */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE7C141EE8940013809D /* master */,
+			);
+			path = heads;
+			sourceTree = "<group>";
+		};
+		C95EAE7D141EE8940013809D /* remotes */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE7E141EE8940013809D /* origin */,
+			);
+			path = remotes;
+			sourceTree = "<group>";
+		};
+		C95EAE7E141EE8940013809D /* origin */ = {
+			isa = PBXGroup;
+			children = (
+				C95EAE7F141EE8940013809D /* HEAD */,
+			);
+			path = origin;
+			sourceTree = "<group>";
+		};
+		C95EAE80141EE8940013809D /* tags */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tags;
 			sourceTree = "<group>";
 		};
 		C96773401419F859007078A6 /* Resources */ = {
@@ -366,6 +599,30 @@
 				C90228BA141B14DC00619E19 /* photo10.jpg in Resources */,
 				C93FECEC141DEE0D007F528F /* arrow.png in Resources */,
 				C93FECED141DEE0D007F528F /* arrow@2x.png in Resources */,
+				C95EAE91141EE8940013809D /* config in Resources */,
+				C95EAE92141EE8940013809D /* description in Resources */,
+				C95EAE93141EE8940013809D /* HEAD in Resources */,
+				C95EAE94141EE8940013809D /* applypatch-msg.sample in Resources */,
+				C95EAE95141EE8940013809D /* commit-msg.sample in Resources */,
+				C95EAE96141EE8940013809D /* post-commit.sample in Resources */,
+				C95EAE97141EE8940013809D /* post-receive.sample in Resources */,
+				C95EAE98141EE8940013809D /* post-update.sample in Resources */,
+				C95EAE99141EE8940013809D /* pre-applypatch.sample in Resources */,
+				C95EAE9A141EE8940013809D /* pre-commit.sample in Resources */,
+				C95EAE9B141EE8940013809D /* pre-rebase.sample in Resources */,
+				C95EAE9C141EE8940013809D /* prepare-commit-msg.sample in Resources */,
+				C95EAE9D141EE8940013809D /* update.sample in Resources */,
+				C95EAE9E141EE8940013809D /* index in Resources */,
+				C95EAE9F141EE8940013809D /* exclude in Resources */,
+				C95EAEA0141EE8940013809D /* HEAD in Resources */,
+				C95EAEA1141EE8940013809D /* master in Resources */,
+				C95EAEA2141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.idx in Resources */,
+				C95EAEA3141EE8940013809D /* pack-eea4367ce74625a8f8c136cd48a8343cd430c902.pack in Resources */,
+				C95EAEA4141EE8940013809D /* packed-refs in Resources */,
+				C95EAEA5141EE8940013809D /* master in Resources */,
+				C95EAEA6141EE8940013809D /* HEAD in Resources */,
+				C95EAEA7141EE8940013809D /* LICENSE in Resources */,
+				C95EAEA8141EE8940013809D /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +669,11 @@
 				C90228B0141AF3C200619E19 /* MBProgressHUD.m in Sources */,
 				C90228B5141B034F00619E19 /* DetailViewController.m in Sources */,
 				C93FECEE141DEE0D007F528F /* PullToRefreshView.m in Sources */,
+				C95EAEA9141EE8940013809D /* SDImageCache.m in Sources */,
+				C95EAEAA141EE8940013809D /* SDWebImageDownloader.m in Sources */,
+				C95EAEAB141EE8940013809D /* SDWebImageManager.m in Sources */,
+				C95EAEAC141EE8940013809D /* UIButton+WebCache.m in Sources */,
+				C95EAEAD141EE8940013809D /* UIImageView+WebCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
