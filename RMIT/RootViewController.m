@@ -77,14 +77,13 @@
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil)
     {
-        cell = [[[PropertyCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:cellIdentifier] autorelease];
     }
     
     Property *property = [self.properties objectAtIndex:indexPath.row];
     cell.textLabel.text = property.address;
     cell.detailTextLabel.text = property.location;
-    cell.imageView.image = property.photo;
                            
     return cell;
 }
