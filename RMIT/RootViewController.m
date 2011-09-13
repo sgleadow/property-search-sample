@@ -85,10 +85,28 @@
 }
 
 #pragma mark -
+#pragma mark UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.searchBar resignFirstResponder];
+}
+
+#pragma mark -
+#pragma UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+{
+    [self search];
+}
+
+#pragma mark -
 #pragma mark Search
 
 - (IBAction)search
 {
+    [self.searchBar resignFirstResponder];
+    
     [[LRResty client] get:@"http://rmit-property-search.heroku.com/search"
                  delegate:self];
 }
