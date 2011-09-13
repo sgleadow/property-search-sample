@@ -22,7 +22,10 @@
         self.textLabel.textColor = [UIColor darkGrayColor];
         self.textLabel.backgroundColor = [UIColor clearColor];
         
-        // More cell styling code goes here
+        self.backgroundView = [[[PropertyCellBackgroundView alloc]
+                               initWithImageName:@"texture"] autorelease];
+        self.selectedBackgroundView = [[[PropertyCellBackgroundView alloc]
+                                initWithImageName:@"texture-highlight"] autorelease];
     }
     
     return self;
