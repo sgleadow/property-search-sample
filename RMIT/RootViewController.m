@@ -88,7 +88,18 @@
 {
     NSData *data = [response responseData];
     
-    // convert data to property objects
+    NSDictionary *jsonDictionary = [data yajl_JSON];
+    NSArray *propertiesArray = [jsonDictionary valueForKey:@"properties"];
+
+    NSMutableArray *newProperties = [NSMutableArray array];
+    for (NSDictionary *dict in propertiesArray)
+    {
+        Property *property = [Property propertyWithDictionary:dict];
+        [newProperties addObject:property];
+    }
+
+    self.properties = newProperties;
+    [self.tableView reloadData];
 }
 
 @end
