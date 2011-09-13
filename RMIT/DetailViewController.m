@@ -29,17 +29,17 @@
     return self;
 }
 
--(void)dealloc
+- (void)dealloc
 {
-  [scrollView release];
-  [address release];
-  [location release];
-  [summary release];
-  [photo release];
-  [property release];
-  [description release];
-  
-  [super dealloc];
+    [scrollView release];
+    [address release];
+    [location release];
+    [summary release];
+    [photo release];
+    [property release];
+    [description release];
+
+    [super dealloc];
 }
 
 
@@ -53,6 +53,7 @@
 
 - (void)viewDidLoad;
 {
+    [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"texture"]];
     
     self.address.text = self.property.address;
@@ -62,24 +63,19 @@
     CALayer *layer = self.photo.layer;
     layer.shadowOpacity = 1;
     layer.shadowOffset = CGSizeMake(0, 2);
-    
-    //Set the scrollView contemt size based on the maximum Y value of the description UILabel. 
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width, CGRectGetMaxY(self.description.frame));
-
-  [super viewDidLoad];
 }
 
--(void)viewDidUnload
+- (void)viewDidUnload
 {
-  [scrollView release];
-  [address release];
-  [location release];
-  [summary release];
-  [photo release];
-  [property release];
-  [description release];
+    [scrollView release];
+    [address release];
+    [location release];
+    [summary release];
+    [photo release];
+    [property release];
+    [description release];
 
-  [super viewDidUnload];
+    [super viewDidUnload];
 }
 
 @end
