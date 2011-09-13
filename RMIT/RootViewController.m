@@ -107,7 +107,14 @@
 {
     [self.searchBar resignFirstResponder];
     
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    if (self.searchBar.text)
+    {
+        [params setValue:self.searchBar.text forKey:@"q"];
+    }
+    
     [[LRResty client] get:@"http://rmit-property-search.heroku.com/search"
+               parameters:params
                  delegate:self];
 }
 
