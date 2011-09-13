@@ -72,6 +72,19 @@
 }
 
 #pragma mark -
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    Property *property = [self.properties objectAtIndex:indexPath.row];
+    DetailViewController *controller = [[[DetailViewController alloc]
+                                         initWithProperty:property]
+                                        autorelease];
+    [self.navigationController pushViewController:controller 
+                                         animated:YES];
+}
+
+#pragma mark -
 #pragma mark Search
 
 - (IBAction)search
