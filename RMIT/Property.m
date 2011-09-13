@@ -10,7 +10,7 @@
 
 @implementation Property
 
-@synthesize address, suburb, postode, price, title, summary, photo;
+@synthesize address, suburb, postode, summary, photo;
 
 + (Property *)propertyWithDictionary:(NSDictionary *)dict
 {
@@ -45,6 +45,7 @@
     [suburb release];
     [postode release];
     [photo release];
+    [summary release];
     
     [super dealloc];
 }
