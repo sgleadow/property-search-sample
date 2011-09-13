@@ -39,6 +39,18 @@
     return property;
 }
 
+
++ (Property *)propertyWithAddess:(NSString *)anAddress
+                          suburb:(NSString *)aSuburb
+                        postcode:(NSString *)aPostcode;
+{
+    return [Property propertyWithAddess:anAddress
+                                 suburb:aSuburb
+                               postcode:aPostcode
+                                  photo:nil
+                                summary:nil];
+}
+
 - (void)dealloc
 {
     [address release];
