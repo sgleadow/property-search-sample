@@ -33,6 +33,12 @@
 {
     [super viewDidLoad];
     
+    self.pullRefreshView = [[[PullToRefreshView alloc]
+                                initWithScrollView:self.tableView]
+                               autorelease];
+    self.pullRefreshView.delegate = self;
+    [self.tableView addSubview:self.pullRefreshView];
+    
     [self search];
 }
 
@@ -141,7 +147,16 @@
 
     self.properties = newProperties;
     [self.tableView reloadData];
+    [self.pullRefreshView finishedLoading];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+#pragma mark -
+#pragma mark PullToRefreshViewDelegate
+
+- (void)pullToRefreshViewShouldRefresh:(PullToRefreshView *)view;
+{
+    [self search];
 }
 
 @end

@@ -13,6 +13,7 @@
 @interface RootViewController : UIViewController <UITableViewDataSource,
                                                   UITableViewDelegate,
                                                   UISearchBarDelegate,
+                                                  PullToRefreshViewDelegate,
                                                   LRRestyClientResponseDelegate>
 
 @property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
