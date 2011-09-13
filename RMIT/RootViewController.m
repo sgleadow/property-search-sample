@@ -113,6 +113,9 @@
         [params setValue:self.searchBar.text forKey:@"q"];
     }
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Loading properties...";
+    
     [[LRResty client] get:@"http://rmit-property-search.heroku.com/search"
                parameters:params
                  delegate:self];
@@ -138,6 +141,7 @@
 
     self.properties = newProperties;
     [self.tableView reloadData];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 
 @end
