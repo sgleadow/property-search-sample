@@ -27,63 +27,31 @@
 }
 
 #pragma mark -
-#pragma mark Load properties
-
--(IBAction)search
-{
-    [self.searchBar resignFirstResponder];
-    
-    NSString *url = @"http://rmit-property-search.heroku.com/search";
-    
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    if (self.searchBar.text)
-    {
-        [params setValue:self.searchBar.text forKey:@"q"];
-    }
-    
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"Loading properties";
-    [[LRResty client] get:url
-               parameters:params
-                 delegate:self];
-}
-
-- (void)restClient:(LRRestyClient *)client receivedResponse:(LRRestyResponse *)response;
-{
-    NSDictionary *propertiesDict = [[response responseData] yajl_JSON];
-    
-    NSMutableArray *loadedProperties = [NSMutableArray array];
-    for (NSDictionary *dict in [propertiesDict valueForKey:@"properties"])
-    {
-        Property *property = [Property propertyWithDictionary:dict];
-        [loadedProperties addObject:property];
-    }
-    
-    self.properties = loadedProperties;
-    [self.pullRefreshView finishedLoading];
-    [self.tableView reloadData];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
-
-#pragma mark -
 #pragma mark UIViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.pullRefreshView = [[[PullToRefreshView alloc] initWithScrollView:self.tableView] autorelease];
-    [self.pullRefreshView setDelegate:self];
-    [self.tableView addSubview:self.pullRefreshView];
-    
-    [self search];
+    self.properties = [NSArray arrayWithObjects:
+                       [Property propertyWithAddess:@"1 Something St"
+                                             suburb:@"Melbourne"
+                                           postcode:@"3000"],
+                       
+                       [Property propertyWithAddess:@"2 Another Rd"
+                                             suburb:@"Sydney"
+                                           postcode:@"2000"],
+                       
+                       [Property propertyWithAddess:@"3 Some other St"
+                                             suburb:@"Brisbane"
+                                           postcode:@"4000"],
+                       nil];
 }
 
 - (void)viewDidUnload
 {
     [tableView release];
     [searchBar release];
-    [pullRefreshView release];
     
     [super viewDidUnload];
 }
@@ -103,46 +71,23 @@
     UITableViewCell *cell = [aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil)
     {
-        cell = [[[PropertyCell alloc] initWithReuseIdentifier:cellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+                                       reuseIdentifier:cellIdentifier] autorelease];
     }
 
     Property *property = [self.properties objectAtIndex:indexPath.row];
     cell.textLabel.text = property.address;
     cell.detailTextLabel.text = property.location;
-    cell.imageView.image = property.photo;
                            
     return cell;
 }
 
 #pragma mark -
-#pragma mark UITableViewDelegate
+#pragma mark Search
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (IBAction)search
 {
-    Property *property = [self.properties objectAtIndex:indexPath.row];
-    DetailViewController *controller = [[[DetailViewController alloc] initWithProperty:property] autorelease];
-    [self.navigationController pushViewController:controller animated:YES];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView;
-{
-    [self.searchBar resignFirstResponder];
-}
-
-#pragma mark -
-#pragma mark UISearchBarDelegate
-
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
-{
-    [self search];
-}
-
-#pragma mark -
-#pragma mark PullToRefreshViewDelegate
-
-- (void)pullToRefreshViewShouldRefresh:(PullToRefreshView *)view;
-{
-    [self search];
+    
 }
 
 @end
