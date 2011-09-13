@@ -61,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.properties.count;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,10 +74,8 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                        reuseIdentifier:cellIdentifier] autorelease];
     }
-
-    Property *property = [self.properties objectAtIndex:indexPath.row];
-    cell.textLabel.text = property.address;
-    cell.detailTextLabel.text = property.location;
+    
+    // Configure cell...
                            
     return cell;
 }

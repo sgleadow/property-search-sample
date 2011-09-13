@@ -64,7 +64,9 @@
 
 - (NSString *)location;
 {
-    return [NSString stringWithFormat:@"%@, %@", self.suburb.uppercaseString, self.postode];
+    return [NSString stringWithFormat:@"%@, %@",
+                                      self.suburb.uppercaseString,
+                                      self.postode];
 }
 
 @end
