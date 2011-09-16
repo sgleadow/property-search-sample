@@ -42,6 +42,13 @@
     self.pullRefreshView.delegate = self;
     [self.tableView addSubview:self.pullRefreshView];
     
+    // Use the following three lines to change the 'Back' button
+    UIBarButtonItem *newBackButton = [[UIBarButtonItem alloc] initWithTitle: @"Back"
+                                                                      style: UIBarButtonItemStyleBordered
+                                                                     target: nil action: nil];
+    self.navigationItem.backBarButtonItem = newBackButton;
+    [newBackButton release];
+
     [self search];
 }
 
