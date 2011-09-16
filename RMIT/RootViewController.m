@@ -17,7 +17,7 @@
 
 @implementation RootViewController
 
-@synthesize searchBar, tableView, properties, pullRefreshView;
+@synthesize searchBar, tableView, properties, pullRefreshView, mapView, isInMapMode;
 
 - (void)dealloc
 {
@@ -25,12 +25,22 @@
     self.pullRefreshView = nil;
     self.tableView = nil;
     self.searchBar = nil;
+    self.mapView = nil;
     [super dealloc];
 }
     
 
 #pragma mark -
 #pragma mark UIViewController
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+  if ((self = [super initWithCoder:aDecoder]))
+  {
+    self.isInMapMode = NO;
+  }
+  return self;
+}
 
 - (void)viewDidLoad
 {
@@ -57,6 +67,7 @@
     self.pullRefreshView = nil;
     self.tableView = nil;
     self.searchBar = nil;
+    self.mapView = nil;
     [super viewDidUnload];
 }
 
@@ -141,6 +152,15 @@
                parameters:params
                  delegate:self];
 }
+
+#pragma mark - 
+#pragma mark Toggle Map View
+
+- (IBAction)toggleMapView:(id)sender
+{
+    NSLog(@"ToggleMapView:sender");
+}
+
 
 #pragma mark -
 #pragma mark LRRestyClientResponseDelegate
