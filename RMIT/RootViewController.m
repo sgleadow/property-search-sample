@@ -49,6 +49,7 @@
     self.pullRefreshView = [[[PullToRefreshView alloc]
                                 initWithScrollView:self.tableView]
                                autorelease];
+
     self.pullRefreshView.delegate = self;
     [self.tableView addSubview:self.pullRefreshView];
     
@@ -99,7 +100,7 @@
     cell.textLabel.text = property.address;
     cell.detailTextLabel.text = property.location;
     cell.imageView.image = property.photo;
-                           
+
     return cell;
 }
 
@@ -112,6 +113,7 @@
     DetailViewController *controller = [[[DetailViewController alloc]
                                          initWithProperty:property]
                                         autorelease];
+
     [self.navigationController pushViewController:controller 
                                          animated:YES];
 }
@@ -148,6 +150,8 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"Loading properties...";
     
+    [self.mapView removeAnnotations:[self.mapView annotations]];
+
     [[LRResty client] get:@"http://rmit-property-search.heroku.com/search"
                parameters:params
                  delegate:self];
@@ -203,6 +207,9 @@
     }
 
     self.properties = newProperties;
+    
+    [self.mapView addAnnotations:self.properties];
+    
     [self.tableView reloadData];
     [self.pullRefreshView finishedLoading];
     [MBProgressHUD hideHUDForView:self.view animated:YES];

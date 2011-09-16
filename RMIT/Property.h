@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
 
-@interface Property : NSObject
+@interface Property : NSObject <MKAnnotation>
 
 + (Property *)propertyWithDictionary:(NSDictionary *)dict;
 
@@ -16,11 +17,9 @@
                           suburb:(NSString *)aSuburb
                         postcode:(NSString *)aPostcode
                            photo:(NSString *)photoName
-                         summary:(NSString *)summary;
-
-+ (Property *)propertyWithAddess:(NSString *)anAddress
-                          suburb:(NSString *)aSuburb
-                        postcode:(NSString *)aPostcode;
+                         summary:(NSString *)summary
+                             lat:(NSString *)lat
+                             lng:(NSString *)lng;
 
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *suburb;
@@ -30,5 +29,10 @@
 @property (nonatomic, copy) NSString *summary;
 
 - (NSString *)location;
+
+
+#pragma mark - MKAnnotation Protocol
+
+@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
 
 @end

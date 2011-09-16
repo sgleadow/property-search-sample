@@ -25,7 +25,7 @@
 @property (nonatomic, retain) PullToRefreshView *pullRefreshView;
 @property (nonatomic, assign) BOOL isInMapMode;
 
--(IBAction)search;
+- (IBAction)search;
 - (IBAction)toggleMapView:(id)sender;
 
 @end
