@@ -156,9 +156,31 @@
 #pragma mark - 
 #pragma mark Toggle Map View
 
+// This method is called from the button in the top right of the navigation bar. 
+// It toggles between the map view and the table view and keeps it's current state in a BOOL property on this controller.
+// The magic here is using UIView transitionFromView:toView:duration:options:completion: 
+// Note that the block used in the final paremeter is only supported in iOS 4+, and the block is called AFTER the animation is complete.
+
 - (IBAction)toggleMapView:(id)sender
 {
-    NSLog(@"ToggleMapView:sender");
+    UIView *fromView = self.tableView;
+    UIView *toView = self.mapView;
+
+    if (self.isInMapMode)
+    {
+        fromView = self.mapView;
+        toView = self.tableView;
+    }
+
+    UIViewAnimationOptions animationOptions = self.isInMapMode ? UIViewAnimationOptionTransitionFlipFromRight : UIViewAnimationOptionTransitionFlipFromLeft;
+
+    [sender setEnabled:NO];
+
+    [UIView transitionFromView:fromView toView:toView duration:0.4 options:animationOptions completion:^(BOOL finished) {
+        self.isInMapMode = !self.isInMapMode;
+        [sender setTitle:self.isInMapMode ? @"List":@"Map"];
+        [sender setEnabled:YES];
+    }];
 }
 
 
