@@ -17,7 +17,6 @@
 		C902289B141AD66B00619E19 /* photo8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9022892141AD66B00619E19 /* photo8.jpg */; };
 		C902289C141AD66B00619E19 /* photo9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9022893141AD66B00619E19 /* photo9.jpg */; };
 		C90228A0141AE04200619E19 /* PropertyCellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */; };
-		C90228A2141AE7FB00619E19 /* properties.json in Resources */ = {isa = PBXBuildFile; fileRef = C90228A1141AE7FB00619E19 /* properties.json */; };
 		C90228A4141AE88000619E19 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228A3141AE88000619E19 /* YAJLiOS.framework */; };
 		C90228A5141AE88000619E19 /* YAJLiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228A3141AE88000619E19 /* YAJLiOS.framework */; };
 		C90228AB141AEBD800619E19 /* LRResty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90228AA141AEBD800619E19 /* LRResty.framework */; };
@@ -88,7 +87,6 @@
 		C9022893141AD66B00619E19 /* photo9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo9.jpg; path = RMIT/photo9.jpg; sourceTree = "<group>"; };
 		C902289E141AE04200619E19 /* PropertyCellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyCellBackgroundView.h; sourceTree = "<group>"; };
 		C902289F141AE04200619E19 /* PropertyCellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyCellBackgroundView.m; sourceTree = "<group>"; };
-		C90228A1141AE7FB00619E19 /* properties.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = properties.json; sourceTree = "<group>"; };
 		C90228A3141AE88000619E19 /* YAJLiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJLiOS.framework; sourceTree = "<group>"; };
 		C90228AA141AEBD800619E19 /* LRResty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LRResty.framework; sourceTree = "<group>"; };
 		C90228AE141AF3C200619E19 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 		C96773401419F859007078A6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C90228A1141AE7FB00619E19 /* properties.json */,
 				C902288B141AD66B00619E19 /* photo1.jpg */,
 				C902288C141AD66B00619E19 /* photo2.jpg */,
 				C902288D141AD66B00619E19 /* photo3.jpg */,
@@ -433,7 +430,6 @@
 				C902289A141AD66B00619E19 /* photo7.jpg in Resources */,
 				C902289B141AD66B00619E19 /* photo8.jpg in Resources */,
 				C902289C141AD66B00619E19 /* photo9.jpg in Resources */,
-				C90228A2141AE7FB00619E19 /* properties.json in Resources */,
 				C90228B7141B034F00619E19 /* DetailViewController.xib in Resources */,
 				C90228BA141B14DC00619E19 /* photo10.jpg in Resources */,
 				C93FECEC141DEE0D007F528F /* arrow.png in Resources */,
