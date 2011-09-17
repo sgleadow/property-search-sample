@@ -15,7 +15,7 @@
                                                   UITableViewDelegate,
                                                   UISearchBarDelegate,
                                                   PullToRefreshViewDelegate,
-                                                  LRRestyClientResponseDelegate>
+                                                  LRRestyClientResponseDelegate, MKMapViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;

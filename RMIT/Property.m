@@ -67,5 +67,11 @@
 #pragma mark -
 #pragma mark MKAnnotation Protocol
 
+//MKAnnotation is required to implement -title if you want to display a callout
+
+-(NSString *)title
+{
+    return self.address;
+}
 
 @end

@@ -62,6 +62,7 @@
     self.navigationItem.backBarButtonItem = newBackButton;
     [newBackButton release];
 
+    self.mapView.delegate = self;
     [self search];
 }
 
@@ -225,5 +226,35 @@
 {
     [self search];
 }
+
+#pragma mark - 
+#pragma mark MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)senderMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    NSString *AnnotationViewReuseIdentifier = @"propertyPinReuseIdentifier";
+    
+    MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[[senderMapView dequeueReusableAnnotationViewWithIdentifier:AnnotationViewReuseIdentifier] retain];
+
+    if (annotationView == nil)
+    {
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewReuseIdentifier];
+        annotationView.canShowCallout = YES;
+        annotationView.pinColor = MKPinAnnotationColorGreen;
+    }
+    else
+    {
+        annotationView.annotation = annotation;
+    }
+    
+    return [annotationView autorelease];
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    
+}
+
+
 
 @end
