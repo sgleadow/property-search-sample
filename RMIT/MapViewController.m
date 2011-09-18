@@ -22,6 +22,11 @@
                                                   forKeyPath:@"properties" 
                                                      options:NSKeyValueObservingOptionNew 
                                                      context:nil];
+
+        [[PropertyManager sharedPropertyManager] addObserver:self
+                                                  forKeyPath:@"selectedProperty"
+                                                     options:(NSKeyValueObservingOptionNew)
+                                                     context:nil];
     }
     return self;
 }
@@ -29,6 +34,7 @@
 -(void)dealloc
 {
     [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"properties"];
+    [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"selectedProperty"];
 
     self.properties = nil;
     self.mapView = nil;
@@ -59,6 +65,17 @@
         [self.mapView addAnnotations:self.properties];
         [self.mapView zoomToFitAnnotations];
     }
+    else if ([keyPath isEqualToString:@"selectedProperty"])
+    {
+        NSArray *selectedAnnotations = self.mapView.selectedAnnotations;
+        for (id<MKAnnotation>annotation in selectedAnnotations)
+        {
+            [self.mapView deselectAnnotation:annotation animated:YES];
+        }
+        
+        Property *newSelectedProperty = [change objectForKey:NSKeyValueChangeNewKey];
+        [self.mapView selectAnnotation:newSelectedProperty animated:YES];
+    }
     else
     {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
@@ -84,5 +101,18 @@
 {
 	return YES;
 }
+
+#pragma mark - MKMapViewDelegate
+
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    PropertyManager *manager = [PropertyManager sharedPropertyManager];
+    
+    if ((Property *)view.annotation != manager.selectedProperty)
+    {
+        [PropertyManager sharedPropertyManager].selectedProperty = (Property *)view.annotation;
+    }
+}
+
 
 @end

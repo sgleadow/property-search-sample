@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSArray *properties;
 @property (nonatomic, retain) PullToRefreshView *pullRefreshView;
 @property (nonatomic, assign) BOOL isInMapMode;
+@property (nonatomic, assign) NSUInteger selectedCellIndex;
 
 - (IBAction)search;
 - (IBAction)toggleMapView:(id)sender;

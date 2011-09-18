@@ -18,11 +18,12 @@
 
 @implementation RootViewController
 
-@synthesize searchBar, tableView, properties, pullRefreshView, mapView, isInMapMode;
+@synthesize searchBar, tableView, properties, pullRefreshView, mapView, isInMapMode, selectedCellIndex;
 
 - (void)dealloc
 {
     [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"properties"];
+    [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"selectedProperty"];
 
     self.properties = nil;
     self.pullRefreshView = nil;
@@ -47,7 +48,12 @@
     [[PropertyManager sharedPropertyManager] addObserver:self 
                                               forKeyPath:@"properties" 
                                                  options:(NSKeyValueObservingOptionNew) 
-                                                 context:nil];    
+                                                 context:nil];
+
+     [[PropertyManager sharedPropertyManager] addObserver:self
+                                               forKeyPath:@"selectedProperty"
+                                                  options:(NSKeyValueObservingOptionNew)
+                                                  context:nil];                                                 
   }
   return self;
 }
@@ -77,6 +83,7 @@
 
 - (void)viewDidUnload
 {
+    self.selectedCellIndex = NSUIntegerMax;
     self.pullRefreshView = nil;
     self.tableView = nil;
     self.searchBar = nil;
@@ -106,6 +113,18 @@
         [self.tableView reloadData];
         [self.pullRefreshView finishedLoading];
         [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }
+    else if([keyPath isEqualToString:@"selectedProperty"])
+    {
+        Property *newSelectedProperty = [change objectForKey:NSKeyValueChangeNewKey];
+
+        NSUInteger newSelectedIndex = [[[PropertyManager sharedPropertyManager] properties] indexOfObject:newSelectedProperty];
+
+        if (newSelectedIndex != self.selectedCellIndex)
+        {
+            self.selectedCellIndex = newSelectedIndex;
+            [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:newSelectedIndex inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        }
     }
     else
     {
@@ -147,6 +166,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     Property *property = [self.properties objectAtIndex:indexPath.row];
+    self.selectedCellIndex = indexPath.row;
+
     [PropertyManager sharedPropertyManager].selectedProperty = property;
     
     DetailViewController *controller = [[[DetailViewController alloc]
