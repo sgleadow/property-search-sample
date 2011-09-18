@@ -13,6 +13,7 @@
 		88B8D1631423710F007A8E32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D1621423710F007A8E32 /* MapKit.framework */; };
 		88B8D16514237B26007A8E32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D16414237B26007A8E32 /* CoreLocation.framework */; };
 		88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */; };
+		88C4832214259F4B00C79490 /* SplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4832114259F4B00C79490 /* SplitViewDelegate.m */; };
 		C9022894141AD66B00619E19 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288B141AD66B00619E19 /* photo1.jpg */; };
 		C9022895141AD66B00619E19 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288C141AD66B00619E19 /* photo2.jpg */; };
 		C9022896141AD66B00619E19 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288D141AD66B00619E19 /* photo3.jpg */; };
@@ -90,6 +91,8 @@
 		88B8D16414237B26007A8E32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		88B8D1B414237CD7007A8E32 /* MKMapView+Zoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Zoom.h"; sourceTree = "<group>"; };
 		88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Zoom.m"; sourceTree = "<group>"; };
+		88C4832014259F4B00C79490 /* SplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewDelegate.h; sourceTree = "<group>"; };
+		88C4832114259F4B00C79490 /* SplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewDelegate.m; sourceTree = "<group>"; };
 		C902288B141AD66B00619E19 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.jpg; path = RMIT/photo1.jpg; sourceTree = "<group>"; };
 		C902288C141AD66B00619E19 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = RMIT/photo2.jpg; sourceTree = "<group>"; };
 		C902288D141AD66B00619E19 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo3.jpg; path = RMIT/photo3.jpg; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				8895B5CB1425901300CC9758 /* MapViewController.h */,
 				8895B5CC1425901300CC9758 /* MapViewController.m */,
 				8895B5CD1425901300CC9758 /* MapViewController.xib */,
+				88C4832014259F4B00C79490 /* SplitViewDelegate.h */,
+				88C4832114259F4B00C79490 /* SplitViewDelegate.m */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -531,6 +536,7 @@
 				C95EAEAD141EE8940013809D /* UIImageView+WebCache.m in Sources */,
 				88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */,
 				8895B5CE1425901300CC9758 /* MapViewController.m in Sources */,
+				88C4832214259F4B00C79490 /* SplitViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
