@@ -13,6 +13,7 @@
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navigationBar;
+@property (nonatomic, retain) NSArray *properties;
 
 - (void)setDetailPopOverButton:(UIBarButtonItem *)button;
 

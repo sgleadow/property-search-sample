@@ -7,22 +7,29 @@
 //
 
 #import "MapViewController.h"
+#import "PropertyManager.h"
 
 @implementation MapViewController
 
-@synthesize mapView, navigationBar;
+@synthesize mapView, navigationBar, properties;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])
+    if ((self = [super initWithCoder:aDecoder]))
     {
-        // Custom initialization
+        [[PropertyManager sharedPropertyManager] addObserver:self 
+                                                  forKeyPath:@"properties" 
+                                                     options:NSKeyValueObservingOptionNew 
+                                                     context:nil];
     }
     return self;
 }
 
 -(void)dealloc
-{    
+{
+    [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"properties"];
+
+    self.properties = nil;
     self.mapView = nil;
     self.navigationBar = nil;
     [super dealloc];
@@ -38,6 +45,22 @@
 - (void)setDetailPopOverButton:(UIBarButtonItem *)button;
 {
     [self.navigationBar.topItem setLeftBarButtonItem: button animated:NO];
+}
+
+#pragma mark - KVO
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"properties"])
+    {
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        self.properties = [change objectForKey:NSKeyValueChangeNewKey];
+        [self.mapView addAnnotations:self.properties];
+    }
+    else
+    {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
 }
 
 
