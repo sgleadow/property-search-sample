@@ -70,7 +70,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return UIDeviceOrientationIsPortrait(interfaceOrientation);
+	return YES;
 }
 
 @end
