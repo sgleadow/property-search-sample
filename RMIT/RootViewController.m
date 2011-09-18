@@ -6,8 +6,6 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <YAJLiOS/YAJL.h>
-
 #import "Property.h"
 #import "PropertyCell.h"
 #import "MBProgressHUD.h"
@@ -16,6 +14,7 @@
 #import "RootViewController.h"
 
 #import "MKMapView+Zoom.h"
+#import "PropertyManager.h"
 
 @implementation RootViewController
 
@@ -23,11 +22,14 @@
 
 - (void)dealloc
 {
+    [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"properties"];
+
     self.properties = nil;
     self.pullRefreshView = nil;
     self.tableView = nil;
     self.searchBar = nil;
     self.mapView = nil;
+
     [super dealloc];
 }
     
@@ -40,9 +42,16 @@
   if ((self = [super initWithCoder:aDecoder]))
   {
     self.isInMapMode = NO;
+    
+    //Add observers to the property manager 
+    [[PropertyManager sharedPropertyManager] addObserver:self 
+                                              forKeyPath:@"properties" 
+                                                 options:(NSKeyValueObservingOptionNew) 
+                                                 context:nil];    
   }
   return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -80,6 +89,31 @@
 	return YES;
 }
 
+#pragma mark - 
+#pragma mark KVO
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"properties"])
+    {
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        
+        self.properties = [change objectForKey:NSKeyValueChangeNewKey];
+
+        [self.mapView addAnnotations:self.properties];
+        [self.mapView zoomToFitAnnotations];
+
+        [self.tableView reloadData];
+        [self.pullRefreshView finishedLoading];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }
+    else
+    {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+}
+
+
 #pragma mark -
 #pragma mark UITableViewDataSource
 
@@ -113,6 +147,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     Property *property = [self.properties objectAtIndex:indexPath.row];
+    [PropertyManager sharedPropertyManager].selectedProperty = property;
+    
     DetailViewController *controller = [[[DetailViewController alloc]
                                          initWithProperty:property]
                                         autorelease];
@@ -155,9 +191,7 @@
     
     [self.mapView removeAnnotations:[self.mapView annotations]];
 
-    [[LRResty client] get:@"http://rmit-property-search.heroku.com/search"
-               parameters:params
-                 delegate:self];
+    [[PropertyManager sharedPropertyManager] performPropertySearch:params];
 }
 
 #pragma mark - 
@@ -190,34 +224,6 @@
     }];
 }
 
-
-#pragma mark -
-#pragma mark LRRestyClientResponseDelegate
-
-- (void)restClient:(LRRestyClient *)client
-  receivedResponse:(LRRestyResponse *)response;
-{
-    NSData *data = [response responseData];
-    
-    NSDictionary *jsonDictionary = [data yajl_JSON];
-    NSArray *propertiesArray = [jsonDictionary valueForKey:@"properties"];
-
-    NSMutableArray *newProperties = [NSMutableArray array];
-    for (NSDictionary *dict in propertiesArray)
-    {
-        Property *property = [Property propertyWithDictionary:dict];
-        [newProperties addObject:property];
-    }
-
-    self.properties = newProperties;
-    
-    [self.mapView addAnnotations:self.properties];
-    [self.mapView zoomToFitAnnotations];
-    
-    [self.tableView reloadData];
-    [self.pullRefreshView finishedLoading];
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
-}
 
 #pragma mark -
 #pragma mark PullToRefreshViewDelegate
