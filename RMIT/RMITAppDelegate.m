@@ -11,13 +11,13 @@
 @implementation RMITAppDelegate
 
 @synthesize window = _window;
-@synthesize navigationController = _navigationController;
+@synthesize rootViewController = _rootViewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     // Add the navigation controller's view to the window and display.
-    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = self.rootViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -64,7 +64,7 @@
 - (void)dealloc
 {
     [_window release];
-    [_navigationController release];
+    [_rootViewController release];
     [super dealloc];
 }
 
