@@ -68,4 +68,9 @@
     self.description = nil;
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return UIDeviceOrientationIsPortrait(interfaceOrientation);
+}
+
 @end

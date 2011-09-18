@@ -53,6 +53,11 @@
     [super viewDidUnload];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return UIDeviceOrientationIsPortrait(interfaceOrientation);
+}
+
 #pragma mark -
 #pragma mark UITableViewDataSource
 
