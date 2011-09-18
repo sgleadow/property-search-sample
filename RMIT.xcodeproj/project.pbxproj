@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8895097D14258D7D00E6E26A /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */; };
 		88B8D1631423710F007A8E32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D1621423710F007A8E32 /* MapKit.framework */; };
 		88B8D16514237B26007A8E32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D16414237B26007A8E32 /* CoreLocation.framework */; };
 		88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8895097C14258D7D00E6E26A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		88B8D1621423710F007A8E32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		88B8D16414237B26007A8E32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		88B8D1B414237CD7007A8E32 /* MKMapView+Zoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Zoom.h"; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8895097A14258D7C00E6E26A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		88B8D1B7142382D9007A8E32 /* UIKit Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +259,7 @@
 		C937DA4E1419D9DD00064AA9 /* RMIT */ = {
 			isa = PBXGroup;
 			children = (
+				8895097A14258D7C00E6E26A /* iPad */,
 				C937DA571419D9DD00064AA9 /* RMITAppDelegate.h */,
 				C937DA581419D9DD00064AA9 /* RMITAppDelegate.m */,
 				C937DA5A1419D9DD00064AA9 /* MainWindow.xib */,
@@ -457,6 +468,7 @@
 				C93FECED141DEE0D007F528F /* arrow@2x.png in Resources */,
 				C95EAEA7141EE8940013809D /* LICENSE in Resources */,
 				C95EAEA8141EE8940013809D /* README.md in Resources */,
+				8895097D14258D7D00E6E26A /* MainWindow-iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +546,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8895097C14258D7D00E6E26A /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
 		C937DA511419D9DD00064AA9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -632,7 +652,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
 				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -647,7 +669,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
 				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
