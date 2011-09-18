@@ -8,6 +8,7 @@
 
 #import "MapViewController.h"
 #import "PropertyManager.h"
+#import "MKMapView+Zoom.h"
 
 @implementation MapViewController
 
@@ -56,6 +57,7 @@
         [self.mapView removeAnnotations:self.mapView.annotations];
         self.properties = [change objectForKey:NSKeyValueChangeNewKey];
         [self.mapView addAnnotations:self.properties];
+        [self.mapView zoomToFitAnnotations];
     }
     else
     {
