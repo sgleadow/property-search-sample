@@ -33,7 +33,13 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Properties
+#pragma mark - MapViewController
+
+- (void)setDetailPopOverButton:(UIBarButtonItem *)button;
+{
+    [self.navigationBar.topItem setLeftBarButtonItem: button animated:NO];
+}
+
 
 #pragma mark - View lifecycle
 

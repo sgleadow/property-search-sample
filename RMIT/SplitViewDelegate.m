@@ -7,6 +7,7 @@
 //
 
 #import "SplitViewDelegate.h"
+#import "MapViewController.h"
 
 @implementation SplitViewDelegate
 
@@ -19,29 +20,35 @@
     return self;
 }
 
-
+//Tells the delegate that the hidden view controller is about to be displayed in a popover.
 
 - (void)splitViewController:(UISplitViewController*)svc 
           popoverController:(UIPopoverController*)pc 
   willPresentViewController:(UIViewController *)aViewController
 {
-    NSLog(@"WillPresentViewController");
+
 }
 
+//Tells the delegate that the specified view controller is about to be hidden.
 
 - (void)splitViewController:(UISplitViewController*)svc 
      willHideViewController:(UIViewController *)aViewController 
           withBarButtonItem:(UIBarButtonItem*)barButtonItem 
        forPopoverController:(UIPopoverController*)pc
 {
-    NSLog(@"WillHideViewController");
+    MapViewController *mapViewController = (MapViewController *)[svc.viewControllers objectAtIndex:1];
+    barButtonItem.title = @"Search Results";
+    [mapViewController setDetailPopOverButton:barButtonItem];
 }
+
+//Tells the delegate that the specified view controller is about to be shown again.
 
 - (void)splitViewController:(UISplitViewController*)svc 
      willShowViewController:(UIViewController *)aViewController 
   invalidatingBarButtonItem:(UIBarButtonItem *)button
 {
-    NSLog(@"WillShowViewController");
+    MapViewController *mapViewController = (MapViewController *)[svc.viewControllers objectAtIndex:1];
+    [mapViewController setDetailPopOverButton:nil];
 }
 
 

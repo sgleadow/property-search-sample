@@ -14,5 +14,6 @@
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain) IBOutlet UINavigationBar *navigationBar;
 
+- (void)setDetailPopOverButton:(UIBarButtonItem *)button;
 
 @end
