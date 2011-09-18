@@ -241,6 +241,7 @@
         annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewReuseIdentifier];
         annotationView.canShowCallout = YES;
         annotationView.pinColor = MKPinAnnotationColorGreen;
+        annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     }
     else
     {
@@ -252,7 +253,12 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
+    DetailViewController *controller = [[[DetailViewController alloc]
+                                         initWithProperty:(Property *)view.annotation]
+                                        autorelease];
     
+    [self.navigationController pushViewController:controller 
+                                         animated:YES];
 }
 
 
