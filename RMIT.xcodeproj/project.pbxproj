@@ -14,6 +14,7 @@
 		88B8D16514237B26007A8E32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D16414237B26007A8E32 /* CoreLocation.framework */; };
 		88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */; };
 		88C4832214259F4B00C79490 /* SplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4832114259F4B00C79490 /* SplitViewDelegate.m */; };
+		88C4832A1425B99D00C79490 /* PropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C483291425B99D00C79490 /* PropertyManager.m */; };
 		C9022894141AD66B00619E19 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288B141AD66B00619E19 /* photo1.jpg */; };
 		C9022895141AD66B00619E19 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288C141AD66B00619E19 /* photo2.jpg */; };
 		C9022896141AD66B00619E19 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288D141AD66B00619E19 /* photo3.jpg */; };
@@ -93,6 +94,8 @@
 		88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Zoom.m"; sourceTree = "<group>"; };
 		88C4832014259F4B00C79490 /* SplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewDelegate.h; sourceTree = "<group>"; };
 		88C4832114259F4B00C79490 /* SplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewDelegate.m; sourceTree = "<group>"; };
+		88C483281425B99D00C79490 /* PropertyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PropertyManager.h; sourceTree = "<group>"; };
+		88C483291425B99D00C79490 /* PropertyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyManager.m; sourceTree = "<group>"; };
 		C902288B141AD66B00619E19 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.jpg; path = RMIT/photo1.jpg; sourceTree = "<group>"; };
 		C902288C141AD66B00619E19 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = RMIT/photo2.jpg; sourceTree = "<group>"; };
 		C902288D141AD66B00619E19 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo3.jpg; path = RMIT/photo3.jpg; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 				C95EAEB1141EEC670013809D /* View */,
 				C95EAEAF141EEC050013809D /* Details */,
 				88B8D1B7142382D9007A8E32 /* UIKit Additions */,
+				88C483281425B99D00C79490 /* PropertyManager.h */,
+				88C483291425B99D00C79490 /* PropertyManager.m */,
 			);
 			path = RMIT;
 			sourceTree = "<group>";
@@ -537,6 +542,7 @@
 				88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */,
 				8895B5CE1425901300CC9758 /* MapViewController.m in Sources */,
 				88C4832214259F4B00C79490 /* SplitViewDelegate.m in Sources */,
+				88C4832A1425B99D00C79490 /* PropertyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
