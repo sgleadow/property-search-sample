@@ -21,10 +21,13 @@
 
 - (void)dealloc
 {
-    [properties release];
-    
+    self.properties = nil;
+    self.pullRefreshView = nil;
+    self.tableView = nil;
+    self.searchBar = nil;
     [super dealloc];
 }
+    
 
 #pragma mark -
 #pragma mark UIViewController
@@ -44,9 +47,9 @@
 
 - (void)viewDidUnload
 {
-    [tableView release];
-    [searchBar release];
-    
+    self.pullRefreshView = nil;
+    self.tableView = nil;
+    self.searchBar = nil;
     [super viewDidUnload];
 }
 

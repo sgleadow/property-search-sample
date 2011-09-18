@@ -26,13 +26,13 @@
 
 - (void)dealloc
 {
-    [scrollView release];
-    [address release];
-    [location release];
-    [summary release];
-    [photo release];
-    [property release];
-    [description release];
+    self.property = nil;
+    self.scrollView = nil;
+    self.address = nil;
+    self.location = nil;
+    self.photo = nil;
+    self.summary = nil;
+    self.description = nil;
 
     [super dealloc];
 }
@@ -58,15 +58,14 @@
 
 - (void)viewDidUnload
 {
-    [scrollView release];
-    [address release];
-    [location release];
-    [summary release];
-    [photo release];
-    [property release];
-    [description release];
-
     [super viewDidUnload];
+
+    self.scrollView = nil;
+    self.address = nil;
+    self.location = nil;
+    self.photo = nil;
+    self.summary = nil;
+    self.description = nil;
 }
 
 @end
