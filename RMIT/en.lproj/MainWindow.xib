@@ -53,7 +53,6 @@
 				<string key="NSFrameSize">{320, 480}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -104,6 +103,12 @@
 						<object class="IBUINavigationItem" key="IBUINavigationItem" id="394667715">
 							<reference key="IBUINavigationBar"/>
 							<string key="IBUITitle">Properties</string>
+							<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="1029703653">
+								<string key="IBUITitle">Map</string>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIStyle">1</int>
+								<reference key="IBUINavigationItem" ref="394667715"/>
+							</object>
 							<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="503360374">
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
@@ -159,6 +164,14 @@
 						<reference key="destination" ref="619226028"/>
 					</object>
 					<int key="connectionID">22</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleMapView:</string>
+						<reference key="source" ref="1029703653"/>
+						<reference key="destination" ref="619226028"/>
+					</object>
+					<int key="connectionID">24</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -225,6 +238,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="503360374"/>
+							<reference ref="1029703653"/>
 						</object>
 						<reference key="parent" ref="619226028"/>
 						<string key="objectName">Navigation Item - Properties</string>
@@ -237,6 +251,11 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
 						<reference key="object" ref="503360374"/>
+						<reference key="parent" ref="394667715"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">23</int>
+						<reference key="object" ref="1029703653"/>
 						<reference key="parent" ref="394667715"/>
 					</object>
 				</object>
@@ -257,6 +276,7 @@
 					<string>19.IBPluginDependency</string>
 					<string>2.IBAttributePlaceholdersKey</string>
 					<string>2.IBPluginDependency</string>
+					<string>23.IBPluginDependency</string>
 					<string>3.CustomClassName</string>
 					<string>3.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
@@ -279,6 +299,7 @@
 						<reference key="dict.values" ref="0"/>
 					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>RMITAppDelegate</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -296,7 +317,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">24</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -345,25 +366,48 @@
 					<string key="className">RootViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">search</string>
-						<string key="NS.object.0">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>search</string>
+							<string>toggleMapView:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
+						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">search</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">search</string>
-							<string key="candidateClassName">id</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>search</string>
+							<string>toggleMapView:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">search</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">toggleMapView:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>mapView</string>
 							<string>searchBar</string>
 							<string>tableView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>MKMapView</string>
 							<string>UISearchBar</string>
 							<string>UITableView</string>
 						</object>
@@ -372,11 +416,16 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>mapView</string>
 							<string>searchBar</string>
 							<string>tableView</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">mapView</string>
+								<string key="candidateClassName">MKMapView</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">searchBar</string>
 								<string key="candidateClassName">UISearchBar</string>
