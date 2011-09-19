@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8895097D14258D7D00E6E26A /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */; };
 		8895B5CE1425901300CC9758 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895B5CC1425901300CC9758 /* MapViewController.m */; };
+		8895B5CF1425901300CC9758 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895B5CD1425901300CC9758 /* MapViewController.xib */; };
 		88B8D1631423710F007A8E32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D1621423710F007A8E32 /* MapKit.framework */; };
 		88B8D16514237B26007A8E32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D16414237B26007A8E32 /* CoreLocation.framework */; };
 		88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */; };
@@ -84,6 +85,7 @@
 		8895097C14258D7D00E6E26A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
 		8895B5CB1425901300CC9758 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		8895B5CC1425901300CC9758 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8895B5CD1425901300CC9758 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		88B8D1621423710F007A8E32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		88B8D16414237B26007A8E32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		88B8D1B414237CD7007A8E32 /* MKMapView+Zoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Zoom.h"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */,
 				8895B5CB1425901300CC9758 /* MapViewController.h */,
 				8895B5CC1425901300CC9758 /* MapViewController.m */,
+				8895B5CD1425901300CC9758 /* MapViewController.xib */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				C95EAEA7141EE8940013809D /* LICENSE in Resources */,
 				C95EAEA8141EE8940013809D /* README.md in Resources */,
 				8895097D14258D7D00E6E26A /* MainWindow-iPad.xib in Resources */,
+				8895B5CF1425901300CC9758 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +530,7 @@
 				C95EAEAC141EE8940013809D /* UIButton+WebCache.m in Sources */,
 				C95EAEAD141EE8940013809D /* UIImageView+WebCache.m in Sources */,
 				88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */,
+				8895B5CE1425901300CC9758 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
