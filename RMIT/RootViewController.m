@@ -15,6 +15,8 @@
 
 #import "RootViewController.h"
 
+#import "MKMapView+Zoom.h"
+
 @implementation RootViewController
 
 @synthesize searchBar, tableView, properties, pullRefreshView, mapView, isInMapMode;
@@ -209,6 +211,7 @@
     self.properties = newProperties;
     
     [self.mapView addAnnotations:self.properties];
+    [self.mapView zoomToFitAnnotations];
     
     [self.tableView reloadData];
     [self.pullRefreshView finishedLoading];
