@@ -27,6 +27,22 @@
     return singletonInstance;
 }
 
+/* A better, thead safe implementation */
+ 
+/*+ (PropertyManager *)sharedPropertyManager
+{
+    static dispatch_once_t pred;
+    static PropertyManager *singletonInstance = nil;
+    
+    dispatch_once(&pred, ^{
+        singletonInstance = [[[self class] alloc] init];
+    });
+    
+    return singletonInstance;
+}
+*/
+
+
 - (void)performPropertySearch:(NSDictionary *)params
 {
     [[LRResty client] get:@"http://rmit-property-search.heroku.com/search"
