@@ -26,13 +26,13 @@
 
 - (void)dealloc
 {
-    self.property = nil;
-    self.scrollView = nil;
-    self.address = nil;
-    self.location = nil;
-    self.photo = nil;
-    self.summary = nil;
-    self.description = nil;
+    RELEASE_SAFELY(property);
+    RELEASE_SAFELY(scrollView);
+    RELEASE_SAFELY(address);
+    RELEASE_SAFELY(location);
+    RELEASE_SAFELY(photo);
+    RELEASE_SAFELY(summary);
+    RELEASE_SAFELY(description);
 
     [super dealloc];
 }

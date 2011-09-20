@@ -25,11 +25,11 @@
     [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"properties"];
     [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"selectedProperty"];
 
-    self.properties = nil;
-    self.pullRefreshView = nil;
-    self.tableView = nil;
-    self.searchBar = nil;
-    self.mapView = nil;
+    RELEASE_SAFELY(properties);
+    RELEASE_SAFELY(pullRefreshView);
+    RELEASE_SAFELY(tableView);
+    RELEASE_SAFELY(searchBar);
+    RELEASE_SAFELY(mapView);
 
     [super dealloc];
 }

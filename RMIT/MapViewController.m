@@ -36,9 +36,9 @@
     [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"properties"];
     [[PropertyManager sharedPropertyManager] removeObserver:self forKeyPath:@"selectedProperty"];
 
-    self.properties = nil;
-    self.mapView = nil;
-    self.navigationBar = nil;
+    RELEASE_SAFELY(properties);
+    RELEASE_SAFELY(mapView);
+    RELEASE_SAFELY(navigationBar);
     [super dealloc];
 }
 
