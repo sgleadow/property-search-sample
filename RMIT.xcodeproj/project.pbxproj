@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		88B8D1631423710F007A8E32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D1621423710F007A8E32 /* MapKit.framework */; };
 		88B8D16514237B26007A8E32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D16414237B26007A8E32 /* CoreLocation.framework */; };
+		88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */; };
 		C9022894141AD66B00619E19 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288B141AD66B00619E19 /* photo1.jpg */; };
 		C9022895141AD66B00619E19 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288C141AD66B00619E19 /* photo2.jpg */; };
 		C9022896141AD66B00619E19 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288D141AD66B00619E19 /* photo3.jpg */; };
@@ -80,6 +81,8 @@
 /* Begin PBXFileReference section */
 		88B8D1621423710F007A8E32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		88B8D16414237B26007A8E32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		88B8D1B414237CD7007A8E32 /* MKMapView+Zoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Zoom.h"; sourceTree = "<group>"; };
+		88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Zoom.m"; sourceTree = "<group>"; };
 		C902288B141AD66B00619E19 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.jpg; path = RMIT/photo1.jpg; sourceTree = "<group>"; };
 		C902288C141AD66B00619E19 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = RMIT/photo2.jpg; sourceTree = "<group>"; };
 		C902288D141AD66B00619E19 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo3.jpg; path = RMIT/photo3.jpg; sourceTree = "<group>"; };
@@ -182,6 +185,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88B8D1B7142382D9007A8E32 /* UIKit Additions */ = {
+			isa = PBXGroup;
+			children = (
+				88B8D1B414237CD7007A8E32 /* MKMapView+Zoom.h */,
+				88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */,
+			);
+			name = "UIKit Additions";
+			sourceTree = "<group>";
+		};
 		C90228AD141AF3C100619E19 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +258,7 @@
 				C95EAEB0141EEC430013809D /* Model */,
 				C95EAEB1141EEC670013809D /* View */,
 				C95EAEAF141EEC050013809D /* Details */,
+				88B8D1B7142382D9007A8E32 /* UIKit Additions */,
 			);
 			path = RMIT;
 			sourceTree = "<group>";
@@ -495,6 +508,7 @@
 				C95EAEAB141EE8940013809D /* SDWebImageManager.m in Sources */,
 				C95EAEAC141EE8940013809D /* UIButton+WebCache.m in Sources */,
 				C95EAEAD141EE8940013809D /* UIImageView+WebCache.m in Sources */,
+				88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
