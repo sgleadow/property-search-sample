@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8895097D14258D7D00E6E26A /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */; };
+		8895B5CE1425901300CC9758 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8895B5CC1425901300CC9758 /* MapViewController.m */; };
+		8895B5CF1425901300CC9758 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895B5CD1425901300CC9758 /* MapViewController.xib */; };
+		88B8D1631423710F007A8E32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D1621423710F007A8E32 /* MapKit.framework */; };
+		88B8D16514237B26007A8E32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B8D16414237B26007A8E32 /* CoreLocation.framework */; };
+		88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */; };
+		88C4832214259F4B00C79490 /* SplitViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C4832114259F4B00C79490 /* SplitViewDelegate.m */; };
+		88C4832A1425B99D00C79490 /* PropertyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C483291425B99D00C79490 /* PropertyManager.m */; };
 		C9022894141AD66B00619E19 /* photo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288B141AD66B00619E19 /* photo1.jpg */; };
 		C9022895141AD66B00619E19 /* photo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288C141AD66B00619E19 /* photo2.jpg */; };
 		C9022896141AD66B00619E19 /* photo3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C902288D141AD66B00619E19 /* photo3.jpg */; };
@@ -76,6 +84,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8895097C14258D7D00E6E26A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		8895B5CB1425901300CC9758 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		8895B5CC1425901300CC9758 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8895B5CD1425901300CC9758 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		88B8D1621423710F007A8E32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		88B8D16414237B26007A8E32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		88B8D1B414237CD7007A8E32 /* MKMapView+Zoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Zoom.h"; sourceTree = "<group>"; };
+		88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Zoom.m"; sourceTree = "<group>"; };
+		88C4832014259F4B00C79490 /* SplitViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitViewDelegate.h; sourceTree = "<group>"; };
+		88C4832114259F4B00C79490 /* SplitViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitViewDelegate.m; sourceTree = "<group>"; };
+		88C483281425B99D00C79490 /* PropertyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PropertyManager.h; sourceTree = "<group>"; };
+		88C483291425B99D00C79490 /* PropertyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyManager.m; sourceTree = "<group>"; };
 		C902288B141AD66B00619E19 /* photo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo1.jpg; path = RMIT/photo1.jpg; sourceTree = "<group>"; };
 		C902288C141AD66B00619E19 /* photo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo2.jpg; path = RMIT/photo2.jpg; sourceTree = "<group>"; };
 		C902288D141AD66B00619E19 /* photo3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = photo3.jpg; path = RMIT/photo3.jpg; sourceTree = "<group>"; };
@@ -151,6 +171,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88B8D16514237B26007A8E32 /* CoreLocation.framework in Frameworks */,
+				88B8D1631423710F007A8E32 /* MapKit.framework in Frameworks */,
 				C93FECF1141DEEFB007F528F /* QuartzCore.framework in Frameworks */,
 				C937DA491419D9DD00064AA9 /* UIKit.framework in Frameworks */,
 				C937DA4B1419D9DD00064AA9 /* Foundation.framework in Frameworks */,
@@ -176,6 +198,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8895097A14258D7C00E6E26A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */,
+				8895B5CB1425901300CC9758 /* MapViewController.h */,
+				8895B5CC1425901300CC9758 /* MapViewController.m */,
+				8895B5CD1425901300CC9758 /* MapViewController.xib */,
+				88C4832014259F4B00C79490 /* SplitViewDelegate.h */,
+				88C4832114259F4B00C79490 /* SplitViewDelegate.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		88B8D1B7142382D9007A8E32 /* UIKit Additions */ = {
+			isa = PBXGroup;
+			children = (
+				88B8D1B414237CD7007A8E32 /* MKMapView+Zoom.h */,
+				88B8D1B514237CD7007A8E32 /* MKMapView+Zoom.m */,
+			);
+			name = "UIKit Additions";
+			sourceTree = "<group>";
+		};
 		C90228AD141AF3C100619E19 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +259,8 @@
 		C937DA471419D9DD00064AA9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88B8D16414237B26007A8E32 /* CoreLocation.framework */,
+				88B8D1621423710F007A8E32 /* MapKit.framework */,
 				C93FECF0141DEEFB007F528F /* QuartzCore.framework */,
 				C90228AA141AEBD800619E19 /* LRResty.framework */,
 				C90228A3141AE88000619E19 /* YAJLiOS.framework */,
@@ -229,6 +275,7 @@
 		C937DA4E1419D9DD00064AA9 /* RMIT */ = {
 			isa = PBXGroup;
 			children = (
+				8895097A14258D7C00E6E26A /* iPad */,
 				C937DA571419D9DD00064AA9 /* RMITAppDelegate.h */,
 				C937DA581419D9DD00064AA9 /* RMITAppDelegate.m */,
 				C937DA5A1419D9DD00064AA9 /* MainWindow.xib */,
@@ -238,6 +285,9 @@
 				C95EAEB0141EEC430013809D /* Model */,
 				C95EAEB1141EEC670013809D /* View */,
 				C95EAEAF141EEC050013809D /* Details */,
+				88B8D1B7142382D9007A8E32 /* UIKit Additions */,
+				88C483281425B99D00C79490 /* PropertyManager.h */,
+				88C483291425B99D00C79490 /* PropertyManager.m */,
 			);
 			path = RMIT;
 			sourceTree = "<group>";
@@ -436,6 +486,8 @@
 				C93FECED141DEE0D007F528F /* arrow@2x.png in Resources */,
 				C95EAEA7141EE8940013809D /* LICENSE in Resources */,
 				C95EAEA8141EE8940013809D /* README.md in Resources */,
+				8895097D14258D7D00E6E26A /* MainWindow-iPad.xib in Resources */,
+				8895B5CF1425901300CC9758 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +539,10 @@
 				C95EAEAB141EE8940013809D /* SDWebImageManager.m in Sources */,
 				C95EAEAC141EE8940013809D /* UIButton+WebCache.m in Sources */,
 				C95EAEAD141EE8940013809D /* UIImageView+WebCache.m in Sources */,
+				88B8D1B614237CD7007A8E32 /* MKMapView+Zoom.m in Sources */,
+				8895B5CE1425901300CC9758 /* MapViewController.m in Sources */,
+				88C4832214259F4B00C79490 /* SplitViewDelegate.m in Sources */,
+				88C4832A1425B99D00C79490 /* PropertyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +568,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8895097B14258D7D00E6E26A /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8895097C14258D7D00E6E26A /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
 		C937DA511419D9DD00064AA9 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -610,7 +674,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
 				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -625,7 +691,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMIT/RMIT-Prefix.pch";
 				INFOPLIST_FILE = "RMIT/RMIT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

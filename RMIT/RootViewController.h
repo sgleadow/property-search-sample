@@ -7,20 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <LRResty/LRResty.h>
+#import <MapKit/MapKit.h>
 #import "PullToRefreshView.h"
 
 @interface RootViewController : UIViewController <UITableViewDataSource,
                                                   UITableViewDelegate,
                                                   UISearchBarDelegate,
                                                   PullToRefreshViewDelegate,
-                                                  LRRestyClientResponseDelegate>
+                                                  MKMapViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
-@property (nonatomic, copy) NSArray *properties;
-@property (nonatomic, retain) PullToRefreshView *pullRefreshView;
+@property (nonatomic, retain) IBOutlet MKMapView *mapView;
 
--(IBAction)search;
+@property (nonatomic, retain) NSArray *properties;
+@property (nonatomic, retain) PullToRefreshView *pullRefreshView;
+@property (nonatomic, assign) BOOL isInMapMode;
+@property (nonatomic, assign) NSUInteger selectedCellIndex;
+
+- (IBAction)search;
+- (IBAction)toggleMapView:(id)sender;
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation Property
 
-@synthesize address, suburb, postode, summary, photo;
+@synthesize address, suburb, postode, summary, photo, coordinate;
 
 + (Property *)propertyWithDictionary:(NSDictionary *)dict
 {
@@ -18,14 +18,18 @@
                                  suburb:[dict valueForKey:@"suburb"]
                                postcode:[dict valueForKey:@"postcode"]
                                   photo:[dict valueForKey:@"photo"]
-                                summary:[dict valueForKey:@"summary"]];
+                                summary:[dict valueForKey:@"summary"]
+                                    lat:[dict valueForKey:@"lat"]
+                                    lng:[dict valueForKey:@"lng"]];
 }
 
 + (Property *)propertyWithAddess:(NSString *)anAddress
                           suburb:(NSString *)aSuburb
                         postcode:(NSString *)aPostcode
                            photo:(NSString *)photoName
-                         summary:(NSString *)aSummary;
+                         summary:(NSString *)aSummary
+                             lat:(NSString *)lat
+                             lng:(NSString *)lng;
 {
     Property *property = [[[Property alloc] init] autorelease];
     
@@ -36,19 +40,10 @@
     property.photo = [UIImage imageNamed:photoName];
     property.summary = aSummary;
     
+    
+    property.coordinate = CLLocationCoordinate2DMake([lat doubleValue],[lng doubleValue]);
+
     return property;
-}
-
-
-+ (Property *)propertyWithAddess:(NSString *)anAddress
-                          suburb:(NSString *)aSuburb
-                        postcode:(NSString *)aPostcode;
-{
-    return [Property propertyWithAddess:anAddress
-                                 suburb:aSuburb
-                               postcode:aPostcode
-                                  photo:nil
-                                summary:nil];
 }
 
 - (void)dealloc
@@ -58,7 +53,7 @@
     [postode release];
     [photo release];
     [summary release];
-    
+
     [super dealloc];
 }
 
@@ -67,6 +62,16 @@
     return [NSString stringWithFormat:@"%@, %@",
                                       self.suburb.uppercaseString,
                                       self.postode];
+}
+
+#pragma mark -
+#pragma mark MKAnnotation Protocol
+
+//MKAnnotation is required to implement -title if you want to display a callout
+
+-(NSString *)title
+{
+    return self.address;
 }
 
 @end

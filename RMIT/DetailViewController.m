@@ -26,13 +26,13 @@
 
 - (void)dealloc
 {
-    [scrollView release];
-    [address release];
-    [location release];
-    [summary release];
-    [photo release];
-    [property release];
-    [description release];
+    RELEASE_SAFELY(property);
+    RELEASE_SAFELY(scrollView);
+    RELEASE_SAFELY(address);
+    RELEASE_SAFELY(location);
+    RELEASE_SAFELY(photo);
+    RELEASE_SAFELY(summary);
+    RELEASE_SAFELY(description);
 
     [super dealloc];
 }
@@ -58,15 +58,19 @@
 
 - (void)viewDidUnload
 {
-    [scrollView release];
-    [address release];
-    [location release];
-    [summary release];
-    [photo release];
-    [property release];
-    [description release];
-
     [super viewDidUnload];
+
+    self.scrollView = nil;
+    self.address = nil;
+    self.location = nil;
+    self.photo = nil;
+    self.summary = nil;
+    self.description = nil;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return YES;
 }
 
 @end
