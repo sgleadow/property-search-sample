@@ -7,8 +7,7 @@
 //
 
 #import "PropertyManager.h"
-
-#import <YAJLiOS/YAJL.h>
+#import "SGJSON.h"
 
 @implementation PropertyManager
 
@@ -56,7 +55,7 @@
 {
     NSData *data = [response responseData];
     
-    NSDictionary *jsonDictionary = [data yajl_JSON];
+    NSDictionary *jsonDictionary = [data sg_object_from_json];
     NSArray *propertiesArray = [jsonDictionary valueForKey:@"properties"];
     
     NSMutableArray *newProperties = [NSMutableArray array];
