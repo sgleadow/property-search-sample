@@ -33,7 +33,7 @@
 
 - (void)test_parse_JSON_data_using_Apple_library
 {
-  id obj = [jsonData_ sg_object_from_json:YES];
+  id obj = [jsonData_ sg_object_from_json:SG_IS_APPLE_JSON_AVAILABLE];
 
   STAssertNotNil(obj, nil);
   
@@ -49,7 +49,7 @@
 
 - (void)test_parse_JSON_string_using_Apple_library
 {
-  id obj = [jsonString_ sg_object_from_json:YES];
+  id obj = [jsonString_ sg_object_from_json:SG_IS_APPLE_JSON_AVAILABLE];
 
   STAssertNotNil(obj, nil);
   
