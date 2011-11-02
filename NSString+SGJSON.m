@@ -1,4 +1,4 @@
-#import "NSObject+SGJSON.h"
+#import "NSString+SGJSON.h"
 
 @implementation NSString (SGJSON)
 
