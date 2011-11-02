@@ -43,8 +43,8 @@
   NSArray *properties = [obj valueForKey:@"properties"];
   STAssertEquals([properties count], 2u, nil);
   
-  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
-  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
+  NSString *summary = [[properties objectAtIndex:1] valueForKey:@"summary"];
+  STAssertEqualObjects(summary, @"Rupertswood, Birthplace of The Ashes", nil);
 }
 
 - (void)test_parse_JSON_string_using_Apple_library
@@ -59,8 +59,8 @@
   NSArray *properties = [obj valueForKey:@"properties"];
   STAssertEquals([properties count], 2u, nil);
   
-  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
-  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
+  NSString *summary = [[properties objectAtIndex:1] valueForKey:@"summary"];
+  STAssertEqualObjects(summary, @"Rupertswood, Birthplace of The Ashes", nil);
 }
 
 - (void)test_parse_JSON_data_using_YAJL_library
@@ -75,8 +75,8 @@
   NSArray *properties = [obj valueForKey:@"properties"];
   STAssertEquals([properties count], 2u, nil);
   
-  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
-  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
+  NSString *summary = [[properties objectAtIndex:1] valueForKey:@"summary"];
+  STAssertEqualObjects(summary, @"Rupertswood, Birthplace of The Ashes", nil);
 }
 
 - (void)test_parse_JSON_string_using_YAJL_library
@@ -91,8 +91,17 @@
   NSArray *properties = [obj valueForKey:@"properties"];
   STAssertEquals([properties count], 2u, nil);
   
-  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
-  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
+  NSString *summary = [[properties objectAtIndex:1] valueForKey:@"summary"];
+  STAssertEqualObjects(summary, @"Rupertswood, Birthplace of The Ashes", nil);
+}
+
+- (void)test_either_library_works
+{
+  id obj1 = [jsonString_ sg_object_from_json];
+  STAssertNotNil(obj1, nil);
+  
+  id obj2 = [jsonData_ sg_object_from_json];
+  STAssertNotNil(obj2, nil);
 }
 
 @end
