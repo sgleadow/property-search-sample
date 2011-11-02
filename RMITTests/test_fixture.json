@@ -1,0 +1,27 @@
+{
+  "title" : "our title",
+  "properties" : [
+    {
+      "address" : "60-74 Buckingham Drive",
+      "suburb" : "Heidelberg",
+      "postcode" : "3084",
+      "photo" : "photo1.jpg",
+      "photo-url" : "",
+      "summary" : "Banyule House, 1839",
+      "lat" : "-37.748127",
+      "lng" : "145.083722",
+      "type" : "buy"
+      },
+      {
+      "address" : "3 Macedon Street",
+      "suburb" : "Sunbury",
+      "postcode" : "3429" ,
+      "photo" : "photo10.jpg",
+      "photo-url" : "",
+      "summary" : "Rupertswood, Birthplace of The Ashes",
+      "lat" : "-37.747446",
+      "lng" : "145.083524",
+      "type" : "buy"
+      }
+  ]
+}
