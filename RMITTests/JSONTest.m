@@ -6,7 +6,6 @@
   NSString *jsonString_;
   NSData *jsonData_;
 }
-
 @end
 
 @implementation JSONTest
@@ -34,22 +33,66 @@
 
 - (void)test_parse_JSON_data_using_Apple_library
 {
-  //id obj = [jsonData_ sg
+  id obj = [jsonData_ sg_object_from_json:YES];
+
+  STAssertNotNil(obj, nil);
+  
+  NSString *title = [obj valueForKey:@"title"];
+  STAssertEqualObjects(title, @"our title", nil);
+  
+  NSArray *properties = [obj valueForKey:@"properties"];
+  STAssertEquals([properties count], 2u, nil);
+  
+  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
+  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
 }
 
 - (void)test_parse_JSON_string_using_Apple_library
 {
+  id obj = [jsonString_ sg_object_from_json:YES];
 
+  STAssertNotNil(obj, nil);
+  
+  NSString *title = [obj valueForKey:@"title"];
+  STAssertEqualObjects(title, @"our title", nil);
+  
+  NSArray *properties = [obj valueForKey:@"properties"];
+  STAssertEquals([properties count], 2u, nil);
+  
+  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
+  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
 }
 
 - (void)test_parse_JSON_data_using_YAJL_library
 {
+  id obj = [jsonData_ sg_object_from_json:NO];
 
+  STAssertNotNil(obj, nil);
+  
+  NSString *title = [obj valueForKey:@"title"];
+  STAssertEqualObjects(title, @"our title", nil);
+  
+  NSArray *properties = [obj valueForKey:@"properties"];
+  STAssertEquals([properties count], 2u, nil);
+  
+  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
+  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
 }
 
 - (void)test_parse_JSON_string_using_YAJL_library
 {
+  id obj = [jsonString_ sg_object_from_json:NO];
 
+  STAssertNotNil(obj, nil);
+  
+  NSString *title = [obj valueForKey:@"title"];
+  STAssertEqualObjects(title, @"our title", nil);
+  
+  NSArray *properties = [obj valueForKey:@"properties"];
+  STAssertEquals([properties count], 2u, nil);
+  
+  NSString *address = [[properties objectAtIndex:1] valueForKey:@"address"];
+  STAssertEqualObjects(address, @"Rupertswood, Birthplace of The Ashes", nil);
 }
 
 @end
